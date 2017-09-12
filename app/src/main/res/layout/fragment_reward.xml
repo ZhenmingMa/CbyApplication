@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#000"
+    />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:background="@mipmap/reward_background">
+
+            <TextView
+                android:id="@+id/fragrewad_allReward_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="￥ 0.00"
+                android:textColor="@color/lTextColor"
+                android:textSize="25sp"
+
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/reward_shape"
+
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:src="@mipmap/blue_img" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/account_reward_get"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/reward_shape_null1"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/account_reward"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/fragrewad_answerBonus_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/radius_bg1"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:text="￥ 0.00"
+                    android:textSize="15sp"
+                    android:textColor="@color/lTextColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/reward_shape_null1"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/account_reward_friends"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/fragrewad_inviteBonus_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/radius_bg1"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:text="￥ 0.00"
+                    android:textSize="15sp"
+                    android:textColor="@color/lTextColor" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/reward_shape">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:src="@mipmap/blue_img" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+
+                    android:paddingTop="5dp"
+                    android:text="@string/account_reward_exchange"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/reward_shape_null1"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/account_reward_getmoney"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/fragrewad_transferred_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/radius_bg1"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:text="￥ 0.00"
+                    android:textSize="15sp"
+                    android:textColor="@color/lTextColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/reward_shape_null1"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/account_reward_loading"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/fragrewad_auditing_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/radius_bg1"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:text="￥ 0.00"
+                    android:textSize="15sp"
+                    android:textColor="@color/lTextColor" />
+            </RelativeLayout>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reward_shape"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:src="@mipmap/blue_img" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:text="@string/account_reward_ask"
+            android:textColor="@color/normalTextColor"
+            android:textSize="20sp" />
+</LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/reward_shape_null"
+            android:padding="5dp">
+
+
+            <RelativeLayout
+                android:id="@+id/reward_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp"
+                >
+
+                <EditText
+                    android:id="@+id/reward_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/reward_edittext"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:id="@+id/reward_getAlipay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/reward_confirm"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="确认输入"
+                    android:textColor="@color/lTextColor"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/reward_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/reward_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="已绑定支付宝账号\n提现款将会通过支付宝转账到该账户"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="17sp" />
+
+                <Spinner
+                    android:id="@+id/reward_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reward_3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:spinnerMode="dropdown"
+                    android:background="@drawable/rect_null"
+                    />
+
+                <TextView
+                    android:id="@+id/reward_aliPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/reward_confirm"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="申请兑付至支付宝"
+                    android:textColor="@color/lTextColor"
+                    android:textSize="@dimen/textNormalSize" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+    </LinearLayout>
+</ScrollView>

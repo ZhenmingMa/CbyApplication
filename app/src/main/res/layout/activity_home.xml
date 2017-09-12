@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.uuun.cbyapplication.activity.HomeActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layoutTop"
+        android:background="@color/themeColor"
+        >
+        <TextView
+            android:id="@+id/home_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="App名字"
+            android:textColor="@color/lTextColor"
+            android:textSize="21sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/home_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical" />
+
+
+    <RadioGroup
+        android:id="@+id/home_rg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F3F3F3"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        >
+
+        <RadioButton
+            android:id="@+id/home_rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="首页"
+            android:drawableTop="@drawable/home_home_check"
+            android:textColor="@color/lTextColor" />
+
+        <RadioButton
+            android:id="@+id/home_rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="账户"
+            android:drawableTop="@drawable/home_account_check"
+            android:textColor="@color/lTextColor" />
+
+        <RadioButton
+            android:id="@+id/home_rb3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="积分商城"
+            android:drawableTop="@drawable/home_shop_check"
+            android:textColor="@color/lTextColor" />
+
+        <RadioButton
+            android:id="@+id/home_rb4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="我的"
+            android:drawableTop="@drawable/home_my_check"
+            android:textColor="@color/lTextColor" />
+    </RadioGroup>
+</LinearLayout>

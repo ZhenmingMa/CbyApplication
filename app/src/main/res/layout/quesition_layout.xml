@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+
+    >
+    <TextView
+        android:id="@+id/txt_question_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/normalTextColor"
+        android:layout_marginLeft="24dp"
+        />
+    <LinearLayout
+        android:id="@+id/lly_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rect_null"
+
+        >
+
+    </LinearLayout>
+
+</LinearLayout>

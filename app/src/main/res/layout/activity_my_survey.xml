@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_survey"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.uuun.cbyapplication.activity.MySurveyActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/themeColor"
+        android:id="@+id/relativeLayout">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/back"
+            android:id="@+id/mysurvey_back"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            />
+        <TextView
+            android:id="@+id/home_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:text="问卷详情"
+            android:textColor="@color/lTextColor"
+            android:textSize="@dimen/textLargeSize" />
+
+        <TextView
+            android:id="@+id/my_survey_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:text="邀请好友"
+            android:textColor="@color/lTextColor"
+            android:textSize="@dimen/textSmallSize" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/survey_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#00000000"
+        />
+
+
+</LinearLayout>

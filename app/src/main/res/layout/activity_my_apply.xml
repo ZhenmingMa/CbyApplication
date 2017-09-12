@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_apply"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.uuun.cbyapplication.activity.MyApplyActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layoutTop"
+        android:background="@color/themeColor">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/back"
+            android:id="@+id/myApply_back"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:text="@string/my_apply"
+            android:textColor="@color/lTextColor"
+            android:textSize="21sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:src="@mipmap/banner"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="#f66" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply_name"
+            android:textColor="#9F9F9F"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/apply_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="39dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:padding="5dp"
+            />
+    </LinearLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="@color/defaultTextColor"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="#f66" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply_phone"
+            android:textSize="15sp"
+            android:textColor="#9F9F9F"
+            />
+
+        <EditText
+            android:id="@+id/apply_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:padding="@dimen/editTextPadding" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/defaultTextColor"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  公司联系邮箱:"
+            android:textSize="15sp"
+            android:textColor="#9F9F9F"
+            />
+
+        <EditText
+            android:id="@+id/apply_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:padding="@dimen/editTextPadding" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/defaultTextColor"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        />
+    <TextView
+        android:id="@+id/apply_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/reward_confirm"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text= "提 交"
+        android:textSize="@dimen/textNormalSize"
+        android:gravity="center"
+        android:textColor="@color/lTextColor" />
+</LinearLayout>

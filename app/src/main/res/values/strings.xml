@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">CbyApplication</string>
+    <string name="recycleview_top">问卷调查列表</string>
+    <string name="account_reward_get">已赚</string>
+    <string name="account_reward">答卷奖励</string>
+    <string name="account_reward_friends">邀请好友</string>
+    <string name="account_reward_exchange">兑换</string>
+    <string name="account_reward_getmoney">已到账</string>
+    <string name="account_reward_loading">审核中</string>
+    <string name="account_reward_ask">提现需先绑定支付宝账号</string>
+    <string name="account_reward_confirm">确认提交</string>
+    <string name="account_integration_login">每日登陆</string>
+    <string name="account_integration_share">分享问卷</string>
+    <string name="account_integration_change">我要换礼</string>
+    <string name="account_integration_record">兑换记录</string>
+    <string name="account_integration_address">兑换地址</string>
+    <string name="account_integration_gift">礼物物流</string>
+    <string name="my_change">修改密码</string>
+    <string name="my_out">退出登录</string>
+    <string name="my_finish">已完成的调研</string>
+    <string name="my_loading">未完成的调研</string>
+    <string name="my_loading1">正在进行中</string>
+    <string name="my_about">关于我们</string>
+    <string name="my_apply">合作申请</string>
+    <string name="my_center">个人中心</string>
+    <string name="login_phone_et">请输入手机号</string>
+    <string name="login_pw_et">请输入密码</string>
+    <string name="login_login">登陆</string>
+    <string name="login_noname">注册</string>
+    <string name="login_forget">忘记密码</string>
+    <string name="register_get_identify">获取验证码</string>
+    <string name="register_into_password">请输入密码</string>
+    <string name="register_ok_password">请确认密码</string>
+    <string name="register_login">已有账号,快速登录</string>
+    <string name="apply_name">公司名称:</string>
+    <string name="apply_phone">公司联系电话:</string>
+    <string name="apply_email">公司联系邮箱:</string>
+    <string name="apply_ok">提交</string>
+    <string name="shop_morning">上午精选</string>
+    <string name="shop_name">积分商城</string>
+    <string name="shop_afternoon">下午精选</string>
+    <string name="address_write">编辑</string>
+    <string name="address_delete">删除</string>
+    <string name="address_name">兑换地址</string>
+    <string name="address_add">添加地址</string>
+    <string name="write_name">编辑地址</string>
+    <string name="write_name_people">收货人</string>
+    <string name="write_phone">联系电话</string>
+    <string name="write_address">所在地区</string>
+    <string name="write_name_et">请输入收货人姓名</string>
+    <string name="write_phone_et">请输入收货人电话</string>
+    <string name="write_ok">确定</string>
+    <string name="surver_top">调研详情</string>
+
+    <!--网络连接状态-->
+    <string name="network_connettions_error">请检查您的网络</string>
+
+</resources>

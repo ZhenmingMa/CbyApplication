@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="82dp"
+            android:layout_height="74dp"
+            android:scaleType="fitXY"
+            android:id="@+id/express_lv_iv"
+           android:layout_margin="11dp"
+            android:src="@mipmap/ic_launcher"
+
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/express_state1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="物流状态"
+                    android:textSize="19sp"
+                    android:textColor="#3B3B3B"
+                    />
+                <TextView
+                    android:id="@+id/express_lv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="运输中"
+                    android:textSize="19sp"
+                    android:textColor="#4BC659"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/express_lv_company"
+                android:text="承运公司"
+                android:textSize="13sp"
+                android:textColor="#898989"
+                android:layout_marginTop="3dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/express_lv_number"
+                android:text="运单编号"
+                android:layout_marginTop="3dp"
+                android:textSize="13sp"
+                android:textColor="#707070"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/express_lv_phone"
+                android:text="官方电话"
+                android:layout_marginTop="3dp"
+                android:textSize="13sp"
+                android:textColor="#848484"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.example.uuun.cbyapplication.myview.My2ListView
+        android:id="@+id/express_detail"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:divider="#00000000"
+        android:dividerHeight="5dp"
+        android:descendantFocusability="afterDescendants"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/express_dowm"
+            android:id="@+id/express_sanjiaoxing"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="7dp"
+            />
+    <TextView
+        android:id="@+id/express_lv_showdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FB9058"
+        android:text="展开"
+
+
+        />
+    </LinearLayout>
+</LinearLayout>

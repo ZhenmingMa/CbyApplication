@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_integrate_address"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:orientation="vertical"
+    tools:context="com.example.uuun.cbyapplication.activity.IntegrateAddressActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layoutTop"
+        android:background="@color/themeColor"
+        >
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/back"
+            android:id="@+id/integrate_addAddress_back"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address_name"
+            android:textColor="@color/lTextColor"
+            android:textSize="21sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            />
+        <TextView
+            android:id="@+id/address_addAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address_add"
+            android:textColor="@color/lTextColor"
+            android:textSize="@dimen/textSmallSize"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="4dp"
+            />
+    </RelativeLayout>
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/address_lv"
+    android:divider="#00000000"
+    android:dividerHeight="5dp"
+    />
+</LinearLayout>

@@ -1,0 +1,135 @@
+package com.example.uuun.cbyapplication.activity;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.example.uuun.cbyapplication.R;
+import com.example.uuun.cbyapplication.adapter.ShopRvAdapter;
+import com.example.uuun.cbyapplication.bean.ShopBean;
+import com.example.uuun.cbyapplication.myapp.MyApp;
+import com.example.uuun.cbyapplication.myview.MyRecyclerView;
+import com.example.uuun.cbyapplication.myview.YtfjrProcessDialog;
+import com.example.uuun.cbyapplication.utils.MyLog;
+import com.example.uuun.cbyapplication.utils.UrlConfig;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 积分商城页面
+ */
+public class IntegrateChangeActivity extends BaseActivity {
+    private RecyclerView rv, rv_down;
+    private ShopRvAdapter adapter;
+    private List<ShopBean> list;
+    private ImageView back;
+    private Context context = MyApp.getInstance();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_integrate_change);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
+        initView();
+        initData();
+        initControl();
+    }
+
+    private void initControl() {
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+    }
+
+    //获取商品数据
+    private void initData() {
+        YtfjrProcessDialog.showLoading(this,true);
+        MyLog.info(UrlConfig.URL_GETALLGOODS);
+        RequestParams params = new RequestParams(UrlConfig.URL_GETALLGOODS);
+        x.http().get(params, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                MyLog.info(result);
+                MyLog.info(System.currentTimeMillis() + "");
+                try {
+                    JSONObject json = new JSONObject(result);
+                    String data = json.getString("data");
+
+                    Gson gson = new Gson();
+                    list = new ArrayList<ShopBean>();
+                    Type type = new TypeToken<ArrayList<ShopBean>>() {
+                    }.getType();
+                    list = gson.fromJson(data, type);
+                    MyLog.info(list.toString());
+                    adapter.setList(list);
+                    adapter.notifyDataSetChanged();
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+                Toast.makeText(context, R.string.network_connettions_error, Toast.LENGTH_SHORT).show();
+                MyLog.info(ex.getMessage());
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+                YtfjrProcessDialog.showLoading(IntegrateChangeActivity.this,false);
+            }
+        });
+}
+
+    private void initView() {
+        rv = (MyRecyclerView) findViewById(R.id.change_recyclerView);
+        rv_down = (MyRecyclerView) findViewById(R.id.change_recyclerView_down);
+        back = (ImageView) findViewById(R.id.change_back);
+
+        adapter = new ShopRvAdapter(context);
+        rv.setAdapter(adapter);
+        GridLayoutManager manager = new GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false);
+        manager.setSmoothScrollbarEnabled(true);
+        rv.setLayoutManager(manager);
+        rv.setHasFixedSize(true);
+        rv.setNestedScrollingEnabled(false);//这两行让recyclerview滑动更流畅
+        rv.setFocusable(false);
+
+        rv_down.setAdapter(adapter);
+        GridLayoutManager manager1 = new GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false);
+        rv_down.setLayoutManager(manager1);
+        rv_down.setHasFixedSize(true);
+        rv_down.setNestedScrollingEnabled(false);//这两行让recyclerview滑动更流畅
+        rv.setFocusable(false);
+    }
+}

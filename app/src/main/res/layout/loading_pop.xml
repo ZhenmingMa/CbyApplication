@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9000"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    >
+
+    <TextView
+        android:id="@+id/loading_pop_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/lTextColor"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="删 除"
+        android:textColor="@color/moneyColor"
+        android:textSize="@dimen/textNormalSize" />
+
+    <TextView
+        android:id="@+id/loading_pop_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="10dp"
+        android:background="@color/lTextColor"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="取 消"
+        android:textColor="@color/moneyColor"
+        android:textSize="@dimen/textNormalSize" />
+</LinearLayout>
