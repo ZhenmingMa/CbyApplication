@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\survey1\CbyApplication\BGABadgeView-master\src\main\assets"/><source path="D:\survey1\CbyApplication\BGABadgeView-master\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\survey1\CbyApplication\BGABadgeView-master\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Users\Ma\Desktop\CbyApplication-1\BGABadgeView-master\src\main\assets"/><source path="C:\Users\Ma\Desktop\CbyApplication-1\BGABadgeView-master\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="C:\Users\Ma\Desktop\CbyApplication-1\BGABadgeView-master\src\debug\assets"/></dataSet></merger>
