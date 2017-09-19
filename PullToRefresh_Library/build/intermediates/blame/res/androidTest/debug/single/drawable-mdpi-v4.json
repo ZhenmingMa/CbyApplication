@@ -4,8 +4,16 @@
         "source": "D:\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\indicator_arrow.png"
     },
     {
+        "merged": "E:\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_rotate.png",
+        "source": "E:\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\default_ptr_rotate.png"
+    },
+    {
         "merged": "D:\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_rotate.png",
         "source": "D:\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "E:\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\indicator_arrow.png",
+        "source": "E:\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\indicator_arrow.png"
     },
     {
         "merged": "D:\\github\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_flip.png",
@@ -38,6 +46,10 @@
     {
         "merged": "C:\\Users\\uuun\\Documents\\GitHub\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_flip.png",
         "source": "C:\\Users\\uuun\\Documents\\GitHub\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\default_ptr_flip.png"
+    },
+    {
+        "merged": "E:\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_flip.png",
+        "source": "E:\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\default_ptr_flip.png"
     },
     {
         "merged": "C:\\Users\\uuun\\Documents\\GitHub\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\default_ptr_rotate.png",
