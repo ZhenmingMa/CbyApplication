@@ -39,15 +39,14 @@ public class LoginActivity extends BaseActivity {
         actionBar.hide();
 
 
-
-            ActivityCollector.addActivity(this);
-            initView();
-            initControl();
+        ActivityCollector.addActivity(this);
+        initView();
+        initControl();
 
     }
 
     private void initControl() {
-        
+
     }
 
     private void initView() {

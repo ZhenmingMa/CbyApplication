@@ -134,7 +134,6 @@ public class WelcomeActivity extends BaseActivity {
             currentUser = null;
             SPUtil.setExitFlag(this,false);
             Intent intent = new Intent(this, LoginActivity.class);
-            //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             finish();
             SPUtil.setTokenFlag(getApplicationContext(),false);

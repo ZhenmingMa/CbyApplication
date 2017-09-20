@@ -110,7 +110,10 @@
         <activity android:name=".activity.SurveyActivity" />
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.AddAddressActivity" />
-        <activity android:name=".activity.Register2Activity"/>
+        <activity android:name=".activity.Register2Activity">
+
+        </activity>
+
         <activity android:name=".activity.WelcomeActivity">
 
             <intent-filter>

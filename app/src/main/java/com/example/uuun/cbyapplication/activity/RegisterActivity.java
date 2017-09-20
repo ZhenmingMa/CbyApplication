@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.uuun.cbyapplication.R;
 import com.example.uuun.cbyapplication.myapp.MyApp;
 import com.example.uuun.cbyapplication.myview.YtfjrProcessDialog;
+import com.example.uuun.cbyapplication.utils.ActivityCollector;
 import com.example.uuun.cbyapplication.utils.CheckUtils;
 import com.example.uuun.cbyapplication.utils.MyLog;
 import com.example.uuun.cbyapplication.utils.UrlConfig;
@@ -92,7 +93,7 @@ public class RegisterActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
+        ActivityCollector.addActivity(this);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
@@ -164,8 +165,8 @@ public class RegisterActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, LoginActivity.class);
-                finish();
                 startActivity(intent);
+                finish();
             }
         });
 

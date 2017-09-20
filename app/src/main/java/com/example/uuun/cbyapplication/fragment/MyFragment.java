@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,7 @@ import com.example.uuun.cbyapplication.activity.RegisterActivity;
 import com.example.uuun.cbyapplication.activity.ReviseActivity;
 import com.example.uuun.cbyapplication.myapp.MyApp;
 import com.example.uuun.cbyapplication.utils.FirstEvent;
+import com.example.uuun.cbyapplication.utils.MyLog;
 import com.example.uuun.cbyapplication.utils.SPUtil;
 
 import org.greenrobot.eventbus.EventBus;
@@ -61,6 +63,17 @@ public class MyFragment extends Fragment {
         initView();
         initControl();
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (MyApp.getCurrentUser() != null){
+            login.setVisibility(View.GONE);
+            noLogin.setVisibility(View.VISIBLE);
+            name.setText(MyApp.getCurrentUser().getPhone()+"");
+            name.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+        }
     }
 
     private void initControl() {
@@ -99,6 +112,7 @@ public class MyFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), MyFinishActivity.class);
                 startActivity(intent);
+
             }
         });
 
@@ -143,6 +157,10 @@ public class MyFragment extends Fragment {
                         SPUtil.setToken(getActivity(), null);
                         EventBus.getDefault().post(
                                 new FirstEvent("exit"));
+
+                        Intent intent = new Intent(getActivity(),LoginActivity.class);
+                        startActivity(intent);
+                        getActivity().finish();
 
                     }
                 }).setNegativeButton("取消", null);
@@ -227,13 +245,15 @@ public class MyFragment extends Fragment {
     }
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(FirstEvent event) {
-        if (event.getMsg().equals("success")) {
-            login.setVisibility(View.GONE);
-            noLogin.setVisibility(View.VISIBLE);
-            name.setText(MyApp.getCurrentUser().getPhone()+"");
-            name.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
 
-        }
+        MyLog.info(System.currentTimeMillis()+event.getMsg());
+
+//        if (event.getMsg().equals("success")) {
+//            login.setVisibility(View.GONE);
+//            noLogin.setVisibility(View.VISIBLE);
+//            name.setText(MyApp.getCurrentUser().getPhone()+"");
+//            name.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+//        }
         if(event.getMsg().equals("visible")){
             badge.showCirclePointBadge();
         }
