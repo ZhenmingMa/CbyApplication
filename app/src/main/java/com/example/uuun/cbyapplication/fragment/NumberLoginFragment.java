@@ -110,7 +110,6 @@ public class NumberLoginFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(),RegisterActivity.class);
                 startActivity(intent);
-                getActivity().finish();
             }
         });
     }

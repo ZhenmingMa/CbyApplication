@@ -140,7 +140,6 @@ public class QuickLoginFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), RegisterActivity.class);
                 startActivity(intent);
-                getActivity().finish();
             }
         });
         login.setOnClickListener(new View.OnClickListener() {

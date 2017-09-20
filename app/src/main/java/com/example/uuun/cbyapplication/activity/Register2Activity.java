@@ -25,6 +25,7 @@ import com.example.uuun.cbyapplication.bean.Province;
 import com.example.uuun.cbyapplication.bean.User;
 import com.example.uuun.cbyapplication.myapp.MyApp;
 import com.example.uuun.cbyapplication.myview.YtfjrProcessDialog;
+import com.example.uuun.cbyapplication.utils.ActivityCollector;
 import com.example.uuun.cbyapplication.utils.FirstEvent;
 import com.example.uuun.cbyapplication.utils.MyDatePicker;
 import com.example.uuun.cbyapplication.utils.MyLog;
@@ -69,10 +70,9 @@ public class Register2Activity extends BaseActivity implements MyDatePicker.Time
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register2);
-
+        ActivityCollector.addActivity(this);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-
         initView();
         initControl();
     }
@@ -317,16 +317,13 @@ public class Register2Activity extends BaseActivity implements MyDatePicker.Time
                         Gson gson = new Gson();
                         User user = gson.fromJson(data, User.class);
 
-
                         SPUtil.setToken(Register2Activity.this, user.getToken());
                         SPUtil.setTokenFlag(Register2Activity.this, true);
                         MyApp.setCurrentUser(user);
                         Toast.makeText(Register2Activity.this, "注册成功", Toast.LENGTH_SHORT).show();
-                        EventBus.getDefault().post(
-                                new FirstEvent("success"));
                         Intent intent = new Intent(Register2Activity.this, HomeActivity.class);
                         startActivity(intent);
-                        finish();
+                        ActivityCollector.finishAll();
                     } else {
                         Toast.makeText(Register2Activity.this, message, Toast.LENGTH_SHORT).show();
                     }
