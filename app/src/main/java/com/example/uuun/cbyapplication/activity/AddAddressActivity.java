@@ -197,7 +197,7 @@ public class AddAddressActivity extends BaseActivity {
             RequestParams params = new RequestParams(UrlConfig.URL_ADDADDRESS);
             params.addQueryStringParameter("token", SPUtil.getToken(AddAddressActivity.this));
             params.addQueryStringParameter("name", name.getText().toString());
-                params.addQueryStringParameter("phone",phoneNum );
+                params.addQueryStringParameter("phone",phone.getText().toString() );
 
             params.addQueryStringParameter("province", text);
             params.addQueryStringParameter("city", text1);

@@ -37,6 +37,8 @@
             android:layout_marginLeft="7dp"
             android:imeOptions="actionNext"
             android:singleLine="true"
+            android:inputType="number"
+            android:digits="1234567890"
             />
             <TextView
                 android:id="@+id/fragment_qlogin_getcheck"
@@ -72,6 +74,8 @@
             android:paddingBottom="10dp"
             android:layout_marginLeft="7dp"
             android:singleLine="true"
+            android:inputType="number"
+            android:digits="1234567890"
             />
     </LinearLayout>
     <RelativeLayout

@@ -15,6 +15,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.example.uuun.cbyapplication.R;
+import com.example.uuun.cbyapplication.activity.MyLoadingActivity;
 import com.example.uuun.cbyapplication.activity.SurvryDetailActivity;
 import com.example.uuun.cbyapplication.bean.SurveyBean;
 import com.example.uuun.cbyapplication.bean.SurveyBean1;
@@ -37,10 +38,12 @@ import java.util.List;
 public class LoadingAdapter extends BaseAdapter {
     private Context context;
     private List<SurveyBean1.DataBean.ContentBean> list = new ArrayList<>();
+    private MyLoadingActivity act;
     private boolean flag = false;
 
-    public LoadingAdapter(Context context) {
+    public LoadingAdapter(Context context,MyLoadingActivity act) {
         this.context = context;
+        this.act = act;
 
     }
 
@@ -158,6 +161,7 @@ public class LoadingAdapter extends BaseAdapter {
                 bundle.putSerializable("surveybean",list.get(i));
                 intent.putExtras(bundle);
                 context.startActivity(intent);
+                act.finish();
             }
         });
 

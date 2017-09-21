@@ -103,7 +103,10 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="10dp"
             android:background="@null"
-            android:padding="@dimen/editTextPadding" />
+            android:padding="@dimen/editTextPadding"
+            android:inputType="number"
+            android:digits="0123456789"
+            />
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"
@@ -134,7 +137,10 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@null"
-            android:padding="@dimen/editTextPadding" />
+            android:padding="@dimen/editTextPadding"
+            android:inputType="textEmailAddress"
+            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@."
+            />
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"

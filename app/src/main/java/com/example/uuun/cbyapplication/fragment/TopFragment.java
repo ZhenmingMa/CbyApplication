@@ -48,17 +48,22 @@ public class TopFragment extends Fragment {
     private Context context = MyApp.getInstance();
     private List<SurveyBean1.DataBean.ContentBean> totalList = new ArrayList<>();
     private int page;
+    //private LinearLayout ll;
+    private boolean tag = false;
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            String s = mGetData(page);
+            String s = (String) msg.obj;
+
             if (TextUtils.isEmpty(s)){
-                Toast.makeText(getActivity(), "获取不到更多数据了", Toast.LENGTH_SHORT).show();
+                tag = true;
+
+
             }
-           // lvAdapter.notifyDataSetChanged();
         }
     };
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -74,7 +79,7 @@ public class TopFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 SurveyBean1.DataBean.ContentBean bean = lvAdapter.getList().get(i-2);
-               // MyLog.info("!!!!!!!!!!!!!------------"+bean.getName());
+                // MyLog.info("!!!!!!!!!!!!!------------"+bean.getName());
                 Intent intent = new Intent(getActivity(),SurveyActivity.class);
                 intent.putExtra("SurveyBean",bean);
                 startActivity(intent);
@@ -86,6 +91,7 @@ public class TopFragment extends Fragment {
     private void initView() {
 
         lv = (PullToRefreshListView) view.findViewById(R.id.home_lv);
+        //ll = (LinearLayout) view.findViewById(R.id.home_bottom);
         lvAdapter = new TopLVAdapter(context);
         page = 1;
         lv.postDelayed(new Runnable() {
@@ -132,17 +138,31 @@ public class TopFragment extends Fragment {
 
             @Override
             public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
-                page++;
-                mGetData(page);
-                lv.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        lv.onRefreshComplete();
-                    }
-                }, 1000);
+                if(tag){
+                    lv.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            lv.onRefreshComplete();
+                            Toast.makeText(getActivity(),"俺是有底线的",Toast.LENGTH_SHORT).show();
+                        }
+                    }, 500);
+                }
+
+
             }
         });
+        lv.setOnLastItemVisibleListener(new PullToRefreshBase.OnLastItemVisibleListener() {
+            @Override
+            public void onLastItemVisible() {
+                page++;
+                // mGetData(page);
 
+                String s = mGetData(page);
+                Message msg = Message.obtain();
+                msg.obj = s;
+                handler.sendMessageDelayed(msg,500);
+            }
+        });
     }
 
     /**
@@ -166,7 +186,7 @@ public class TopFragment extends Fragment {
                     content = data1.getContent();
                     totalList.addAll(content);
                     lvAdapter.setList(totalList);
-               }
+                }
             }
 
             @Override
@@ -185,6 +205,6 @@ public class TopFragment extends Fragment {
 
             }
         });
-           return result1[0];
+        return result1[0];
     }
 }

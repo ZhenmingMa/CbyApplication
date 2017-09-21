@@ -45,6 +45,7 @@ public class IntegrateActivity extends BaseActivity {
     private RelativeLayout rl;
     private Address address, address1;//address网络请求下来的默认地址,address1是添加地址选择的地址
     private ImageView back;
+    private boolean flag;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,7 +108,11 @@ public class IntegrateActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(IntegrateActivity.this, WriteAddressActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("address", address);
+                if(!flag){
+                    bundle.putSerializable("address", address1);
+                }else{
+                    bundle.putSerializable("address", address);
+                }
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
@@ -132,44 +137,50 @@ public class IntegrateActivity extends BaseActivity {
         commit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                YtfjrProcessDialog.showLoading(IntegrateActivity.this,true);
-                RequestParams params = new RequestParams(UrlConfig.URL_EXCHANGEGOODS);
-                params.addBodyParameter("token", SPUtil.getToken(IntegrateActivity.this));
-                params.addBodyParameter("id", bean.getId() + "");
-                x.http().post(params, new Callback.CommonCallback<String>() {
-                    @Override
-                    public void onSuccess(String result) {
-                        try {
-                            JSONObject json = new JSONObject(result);
-                            if (json.getInt("code") == 0) {
-                                int integration = SPUtil.getIntegration(IntegrateActivity.this);
-                                reminder.setText(integration - bean.getPrice() + "积分");
-                                Toast.makeText(IntegrateActivity.this, "兑换成功", Toast.LENGTH_SHORT).show();
+                if(!flag){
+                    Toast.makeText(IntegrateActivity.this,"兑换地址不能为空",Toast.LENGTH_SHORT).show();
+                }else{
+                    YtfjrProcessDialog.showLoading(IntegrateActivity.this,true);
+                    RequestParams params = new RequestParams(UrlConfig.URL_EXCHANGEGOODS);
+                    params.addBodyParameter("token", SPUtil.getToken(IntegrateActivity.this));
+                    params.addBodyParameter("id", bean.getId() + "");
+                    x.http().post(params, new Callback.CommonCallback<String>() {
+                        @Override
+                        public void onSuccess(String result) {
+                            try {
+                                JSONObject json = new JSONObject(result);
+                                if (json.getInt("code") == 0) {
+                                    int integration = SPUtil.getIntegration(IntegrateActivity.this);
+                                    reminder.setText(integration - bean.getPrice() + "积分");
+                                    Toast.makeText(IntegrateActivity.this, "兑换成功", Toast.LENGTH_SHORT).show();
+                                    finish();
 
-                            } else {
-                                Toast.makeText(IntegrateActivity.this, json.getString("message"), Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(IntegrateActivity.this, json.getString("message"), Toast.LENGTH_SHORT).show();
+                                }
+                            } catch (JSONException e) {
+
                             }
-                        } catch (JSONException e) {
+                        }
+
+                        @Override
+                        public void onError(Throwable ex, boolean isOnCallback) {
 
                         }
-                    }
 
-                    @Override
-                    public void onError(Throwable ex, boolean isOnCallback) {
+                        @Override
+                        public void onCancelled(CancelledException cex) {
 
-                    }
+                        }
 
-                    @Override
-                    public void onCancelled(CancelledException cex) {
+                        @Override
+                        public void onFinished() {
+                            YtfjrProcessDialog.showLoading(IntegrateActivity.this,false);
 
-                    }
+                        }
+                    });
+                }
 
-                    @Override
-                    public void onFinished() {
-                        YtfjrProcessDialog.showLoading(IntegrateActivity.this,false);
-
-                    }
-                });
             }
         });
     }
@@ -273,6 +284,7 @@ public class IntegrateActivity extends BaseActivity {
                         } else {
                             rl.setVisibility(View.GONE);
                             addDefault.setVisibility(View.VISIBLE);
+                            flag = false;
                         }
                     }
                 } catch (JSONException e) {

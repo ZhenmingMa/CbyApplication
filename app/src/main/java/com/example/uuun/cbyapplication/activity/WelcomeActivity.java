@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.view.View;
@@ -39,17 +37,7 @@ public class WelcomeActivity extends BaseActivity {
     private List<ImageView> images;
     private ImageView iv;
     private WelcomeVpAdapter adapter;
-    private MyRunnable runnable = new MyRunnable();
-    private int index = -1;
     private boolean firstFlag;
-    private Handler handler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-
-
-        }
-    };
     private MyApp myApp;
 
     @Override
@@ -86,6 +74,7 @@ public class WelcomeActivity extends BaseActivity {
                     iv.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            SPUtil.setFirstFlag(WelcomeActivity.this,true);
                             Intent intent = new Intent(WelcomeActivity.this,LoginActivity.class);
                             startActivity(intent);
                         }
@@ -100,7 +89,7 @@ public class WelcomeActivity extends BaseActivity {
             }
         });
         //放这里,放前面的话可能viewpager没有初始化完成
-        handler.post(runnable);
+        //handler.post(runnable);
     }
 
     private void initView() {
@@ -116,7 +105,7 @@ public class WelcomeActivity extends BaseActivity {
         if(!firstFlag){
             adapter = new WelcomeVpAdapter(images);
             vp.setAdapter(adapter);
-            SPUtil.setFirstFlag(this,true);
+
         }else{
             myApp.setCurrentUser(checkStatus());
         }
@@ -189,20 +178,5 @@ public class WelcomeActivity extends BaseActivity {
         }
         return currentUser;
     }
-    class MyRunnable implements Runnable{
-
-        @Override
-        public void run() {
-            if(index<=2){
-                index++;
-                //处理下标越界的问题
-                //index = index%icons.length;
-
-                vp.setCurrentItem(index);
-
-                handler.postDelayed(runnable,2000);
-            }
-
-        }
-    }
+//
 }

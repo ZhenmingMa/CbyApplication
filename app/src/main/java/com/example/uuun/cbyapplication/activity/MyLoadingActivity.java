@@ -3,7 +3,6 @@ package com.example.uuun.cbyapplication.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -52,21 +51,21 @@ public class MyLoadingActivity extends BaseActivity {
         });
 
 
-        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-                                          @Override
-                                          public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                                              int length = adapter.getList().size();
-                                              for (int j = 0; j < length; ++j) {
-                                                  View view1 = lv.getChildAt(j);
-                                                  ll = (LinearLayout) view1.findViewById(R.id.loading_item_ll);
-                                                  layoutParams = (LinearLayout.LayoutParams) ll.getLayoutParams();
-                                                  layoutParams.setMargins(20, 0, 0, 0);
-                                                  ll.setLayoutParams(layoutParams);
-                                              }
-                                              return true;
-                                          }
-                                      }
-        );
+//        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//                                          @Override
+//                                          public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                                              int length = adapter.getList().size();
+//                                              for (int j = 0; j < length; ++j) {
+//                                                  View view1 = lv.getChildAt(j);
+//                                                  ll = (LinearLayout) view1.findViewById(R.id.loading_item_ll);
+//                                                  layoutParams = (LinearLayout.LayoutParams) ll.getLayoutParams();
+//                                                  layoutParams.setMargins(20, 0, 0, 0);
+//                                                  ll.setLayoutParams(layoutParams);
+//                                              }
+//                                              return true;
+//                                          }
+//                                      }
+//        );
 
 
 
@@ -76,7 +75,7 @@ public class MyLoadingActivity extends BaseActivity {
         lv = (ListView) findViewById(R.id.myloading_lv);
         back = (ImageView) findViewById(R.id.myLoading_back);
 
-        adapter = new LoadingAdapter(this);
+        adapter = new LoadingAdapter(this,this);
         lv.setAdapter(adapter);
 
     }
