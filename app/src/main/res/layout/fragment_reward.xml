@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="1dp"
-    android:background="#000"
-    />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000"
+            />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="135dp"
@@ -229,32 +230,32 @@
                     android:textColor="@color/lTextColor" />
             </RelativeLayout>
         </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/reward_shape"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        >
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="3dp"
-            android:src="@mipmap/blue_img" />
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/reward_shape"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            >
 
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:paddingTop="5dp"
-            android:text="@string/account_reward_ask"
-            android:textColor="@color/normalTextColor"
-            android:textSize="20sp" />
-</LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:src="@mipmap/blue_img" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/account_reward_ask"
+                android:textColor="@color/normalTextColor"
+                android:textSize="20sp" />
+        </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="170dp"
@@ -279,8 +280,8 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/reward_edittext"
-                    android:inputType="textEmailAddress"
                     android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@."
+                    android:inputType="number"
                     android:padding="10dp" />
 
                 <TextView
@@ -317,7 +318,7 @@
                     android:textColor="@color/normalTextColor"
                     android:textSize="17sp" />
 
-                <Spinner
+                <org.angmarch.views.NiceSpinner
                     android:id="@+id/reward_spinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -325,13 +326,16 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
-                    android:spinnerMode="dropdown"
                     android:background="@drawable/rect_null"
+                    app:arrowTint="@color/rectangleColor"
+                    app:dropDownListPaddingBottom="60dp"
+                    android:dropDownVerticalOffset="-50dp"
+                    android:dropDownHorizontalOffset="20dp"
                     />
 
                 <TextView
                     android:id="@+id/reward_aliPay"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"

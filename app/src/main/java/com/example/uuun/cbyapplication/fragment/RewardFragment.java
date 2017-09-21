@@ -11,19 +11,19 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.uuun.cbyapplication.R;
 import com.example.uuun.cbyapplication.activity.LoginActivity;
-import com.example.uuun.cbyapplication.adapter.MySpinnerAdapter;
 import com.example.uuun.cbyapplication.myapp.MyApp;
 import com.example.uuun.cbyapplication.utils.FirstEvent;
 import com.example.uuun.cbyapplication.utils.MyLog;
 import com.example.uuun.cbyapplication.utils.SPUtil;
 import com.example.uuun.cbyapplication.utils.UrlConfig;
 
+import org.angmarch.views.NiceSpinner;
+import org.angmarch.views.NiceSpinnerBaseAdapter;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -33,7 +33,8 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 
@@ -46,13 +47,11 @@ public class RewardFragment extends Fragment {
     private View view;
     private EditText et;
     private TextView mMoney;
-    private List<String> list;
-    private double money;
+    private String money = "20";
     private TextView getAlipay, allReward, answerReward, inviteReward,transferred,auditing;
     private RelativeLayout reward_1, reward_2;
-    private Spinner spinner;
-    private MySpinnerAdapter adapter;
-
+    private NiceSpinner spinner;
+    //private boolean flag = false;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -143,8 +142,10 @@ public class RewardFragment extends Fragment {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                MySpinnerAdapter adapter = (MySpinnerAdapter) adapterView.getAdapter();
-                money = Double.parseDouble((String) adapter.getItem(i));
+                //flag = true;
+                NiceSpinnerBaseAdapter adapter = (NiceSpinnerBaseAdapter) adapterView.getAdapter();
+                money = adapter.getItemInDataset(i).toString();
+                //Toast.makeText(getActivity(),item,Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -156,9 +157,10 @@ public class RewardFragment extends Fragment {
         mMoney.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+               // Toast.makeText(getActivity(),money,Toast.LENGTH_SHORT).show();
                 RequestParams params = new RequestParams(UrlConfig.URL_WITHDRAW);
                 params.addBodyParameter("token", SPUtil.getToken(getActivity()));
-                params.addBodyParameter("count",money+"");
+                params.addBodyParameter("count",money);
                 params.addBodyParameter("alipay",et.getText().toString());
                 x.http().post(params, new Callback.CommonCallback<String>() {
                     @Override
@@ -214,16 +216,11 @@ public class RewardFragment extends Fragment {
         auditing = (TextView) view.findViewById(R.id.fragrewad_auditing_tv);
         reward_1 = (RelativeLayout) view.findViewById(R.id.reward_1);
         reward_2 = (RelativeLayout) view.findViewById(R.id.reward_2);
-        spinner = (Spinner) view.findViewById(R.id.reward_spinner);
+        spinner = (NiceSpinner) view.findViewById(R.id.reward_spinner);
         mMoney = (TextView) view.findViewById(R.id.reward_aliPay);
-        list = new ArrayList<>();
-        list.add("20");
-        list.add("50");
-        list.add("100");
 
-        adapter = new MySpinnerAdapter(getActivity());
-        adapter.setList(list);
-        spinner.setAdapter(adapter);
+        List<String> dataset = new LinkedList<>(Arrays.asList("20", "50", "70","100"));
+        spinner.attachDataSource(dataset);
 
         EventBus.getDefault().register(this);
 

@@ -1,74 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\uuun\\Documents\\GitHub\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_flip.png",
-        "source": "C:\\Users\\uuun\\Documents\\GitHub\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_flip.png"
-    },
-    {
-        "merged": "E:\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",
-        "source": "E:\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\indicator_arrow.png"
-    },
-    {
-        "merged": "D:\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_flip.png",
-        "source": "D:\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_flip.png"
-    },
-    {
         "merged": "C:\\Users\\uuun\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
         "source": "C:\\Users\\uuun\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
-    },
-    {
-        "merged": "C:\\Users\\Ma\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_flip.png",
-        "source": "C:\\Users\\Ma\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_flip.png"
-    },
-    {
-        "merged": "E:\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_flip.png",
-        "source": "E:\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_flip.png"
-    },
-    {
-        "merged": "C:\\Users\\uuun\\Documents\\GitHub\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",
-        "source": "C:\\Users\\uuun\\Documents\\GitHub\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\indicator_arrow.png"
-    },
-    {
-        "merged": "D:\\github\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_flip.png",
-        "source": "D:\\github\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_flip.png"
     },
     {
         "merged": "C:\\Users\\uuun\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_flip.png",
         "source": "C:\\Users\\uuun\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_flip.png"
     },
     {
-        "merged": "C:\\Users\\uuun\\Documents\\GitHub\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
-        "source": "C:\\Users\\uuun\\Documents\\GitHub\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
-    },
-    {
-        "merged": "D:\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
-        "source": "D:\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
-    },
-    {
-        "merged": "D:\\github\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",
-        "source": "D:\\github\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\indicator_arrow.png"
-    },
-    {
         "merged": "C:\\Users\\uuun\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",
         "source": "C:\\Users\\uuun\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\indicator_arrow.png"
-    },
-    {
-        "merged": "D:\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",
-        "source": "D:\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\indicator_arrow.png"
-    },
-    {
-        "merged": "C:\\Users\\Ma\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
-        "source": "C:\\Users\\Ma\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
-    },
-    {
-        "merged": "D:\\github\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
-        "source": "D:\\github\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
-    },
-    {
-        "merged": "C:\\Users\\Ma\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",
-        "source": "C:\\Users\\Ma\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\indicator_arrow.png"
-    },
-    {
-        "merged": "E:\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
-        "source": "E:\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
     }
 ]

@@ -45,4 +45,5 @@ dependencies {
     compile project(':PullToRefresh_Library')
     compile files('libs/MobTools-2017.0321.1624.jar')
     compile files('libs/MobCommons-2017.0321.1624.jar')
+    compile project(':nice-spinner-master')
 }

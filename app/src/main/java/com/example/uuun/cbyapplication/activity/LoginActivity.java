@@ -54,7 +54,7 @@ public class LoginActivity extends BaseActivity {
         vp = (ViewPager) findViewById(R.id.login_vp);
 
         tab.setSelectedTabIndicatorColor(Color.parseColor("#0099FF"));
-        tab.setSelectedTabIndicatorHeight(5);
+        tab.setSelectedTabIndicatorHeight(5);//下划线高度
         tab.setMinimumWidth(100);
         tab.setTabMode(TabLayout.MODE_FIXED);
         tab.setTabTextColors(Color.BLACK, Color.parseColor("#0099FF"));
