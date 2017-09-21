@@ -341,24 +341,17 @@ public class SurvryDetailActivity extends BaseActivity {
         public void onClick(View arg0) {
             // TODO Auto-generated method stub
             //判断当前问题是单选还是多选
-            /*Log.e("------", "选择了-----第"+i+"题");
-            for(int q=0;q<imglist.size();q++){
-                for(int w=0;w<imglist.get(q).size();w++){
-//                  Log.e("---", "共有------"+imglist.get(q).get(w));
-                }
-            }
-            Log.e("----", "点击了---"+imglist.get(i).get(j));*/
 
             if (list.get(i).getQuestion().getType() == 2) {
                 //多选
                 if (list_option.get(j).getAns_state() == 0) {
                     //如果未被选中
-                    txt.setTextColor(Color.parseColor("#EA5514"));
+                    txt.setBackgroundColor(Color.GRAY);
                     imglist.get(i).get(j).setBackgroundDrawable(getResources().getDrawable(R.drawable.multiselect_true));
                     list_option.get(j).setAns_state(1);
                     list.get(i).getQuestion().setQue_state(1);
                 } else {
-                    txt.setTextColor(Color.parseColor("#595757"));
+                    txt.setBackgroundColor(Color.WHITE);
                     imglist.get(i).get(j).setBackgroundDrawable(getResources().getDrawable(R.drawable.multiselect_false));
                     list_option.get(j).setAns_state(0);
                     int count = 0;
