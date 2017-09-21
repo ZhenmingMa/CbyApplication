@@ -217,8 +217,8 @@ public class RewardFragment extends Fragment {
         reward_1 = (RelativeLayout) view.findViewById(R.id.reward_1);
         reward_2 = (RelativeLayout) view.findViewById(R.id.reward_2);
         spinner = (NiceSpinner) view.findViewById(R.id.reward_spinner);
-        mMoney = (TextView) view.findViewById(R.id.reward_aliPay);
 
+        mMoney = (TextView) view.findViewById(R.id.reward_aliPay);
         List<String> dataset = new LinkedList<>(Arrays.asList("20", "50", "70","100"));
         spinner.attachDataSource(dataset);
 

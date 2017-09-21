@@ -44,7 +44,7 @@ import org.xutils.x;
 public class IntegrationFragment extends Fragment {
     private View view;
     private RelativeLayout address,record,change,express;
-    private TextView num,loginNum,shareNum;
+    private TextView num,loginNum,shareNum,integrate_get;
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -124,6 +124,7 @@ public class IntegrationFragment extends Fragment {
         num = (TextView) view.findViewById(R.id.integration_num);
         loginNum = (TextView) view.findViewById(R.id.integration_login);
         shareNum = (TextView) view.findViewById(R.id.integration_share);
+        integrate_get = (TextView) view.findViewById(R.id.integration_get);
         EventBus.getDefault().register(this);
 
         num.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));

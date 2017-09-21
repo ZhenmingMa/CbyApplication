@@ -333,6 +333,7 @@
                     android:dropDownHorizontalOffset="20dp"
                     />
 
+
                 <TextView
                     android:id="@+id/reward_aliPay"
                     android:layout_width="match_parent"
