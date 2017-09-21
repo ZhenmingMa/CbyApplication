@@ -4,6 +4,10 @@
         "source": "D:\\github\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
     },
     {
+        "merged": "C:\\Users\\uuun\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "C:\\Users\\uuun\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
+    },
+    {
         "merged": "E:\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",
         "source": "E:\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
     },
@@ -22,6 +26,10 @@
     {
         "merged": "C:\\Users\\Ma\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",
         "source": "C:\\Users\\Ma\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\uuun\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "C:\\Users\\uuun\\Desktop\\CbyApplication-1\\PullToRefresh_Library\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_top.xml"
     },
     {
         "merged": "D:\\github\\survey1\\CbyApplication\\PullToRefresh_Library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_top.xml",
