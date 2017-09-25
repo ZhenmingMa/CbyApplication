@@ -49,6 +49,7 @@
         android:background="@color/lTextColor"
         android:orientation="vertical"
         >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -59,7 +60,8 @@
                 android:textSize="15sp"
                 android:textColor="#646464"
                 android:layout_marginLeft="14dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
                 />
             <EditText
                 android:id="@+id/act_add_address_name_tv"
@@ -67,7 +69,10 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:layout_marginLeft="22dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:inputType="phone"
+                android:layout_weight="1"
                 />
     </LinearLayout>
             <TextView
@@ -75,6 +80,9 @@
                 android:layout_height="0.5dp"
                 android:background="@color/defaultTextColor"
                 />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -85,7 +93,8 @@
                 android:text="@string/write_phone"
                 android:textSize="15sp"
                 android:textColor="#646464"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="14dp"
                 />
             <EditText
@@ -94,9 +103,21 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 />
     </LinearLayout>
+        <ImageView
+            android:id="@+id/addAddress_readPhone"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@mipmap/address_phone"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+
+            />
+        </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
@@ -105,15 +126,18 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="所在地区"
                 android:textSize="15sp"
                 android:textColor="#646464"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="14dp"
                 android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 />
         <TextView
             android:id="@+id/addAddress_province"

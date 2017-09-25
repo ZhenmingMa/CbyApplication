@@ -51,7 +51,7 @@ public class AddAddressActivity extends BaseActivity {
     private int pId,cId;
     private ListView lv;
     private List<Province> city;
-    private ImageView setDefault,back;
+    private ImageView setDefault,back,readPhone;
     private int tag = 0,mTag = 1;
     private boolean flag = false;
     private String phoneNum;
@@ -72,6 +72,14 @@ public class AddAddressActivity extends BaseActivity {
 
 
     private void initControl() {
+
+        readPhone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AddAddressActivity.this,GetContactsActivity.class);
+                startActivityForResult(intent,1);
+            }
+        });
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -173,6 +181,7 @@ public class AddAddressActivity extends BaseActivity {
         detailAddress = (EditText) findViewById(R.id.addAddress_detail);
         setDefault = (ImageView) findViewById(R.id.addAddress_default);
         back = (ImageView) findViewById(R.id.addAddress_back);
+        readPhone = (ImageView) findViewById(R.id.addAddress_readPhone);
 
         adapter = new AddLvAdapter(this);
     }
