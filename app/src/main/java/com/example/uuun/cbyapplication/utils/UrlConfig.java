@@ -19,7 +19,7 @@ public class UrlConfig {
     public final static String URL_LOGINBYPHONE = URL_BASE+"/loginByPhone";
 
     //获取所有商品接口
-    public final static String URL_GETALLGOODS = URL_BASE+"/shop/getAllGoods";
+    public final static String URL_GETALLGOODS = URL_BASE+"/getAllGoods";
 
     //兑换商品接口
     public final static String URL_EXCHANGEGOODS = URL_BASE+"/shop/exchangeGoods";

@@ -8,15 +8,17 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.uuun.cbyapplication.R;
 import com.example.uuun.cbyapplication.bean.ShopBean;
+import com.example.uuun.cbyapplication.utils.UrlConfig;
 
 /**
  * 商品详情页
  */
 public class ShopDetailActivity extends AppCompatActivity {
-    private ImageView back;
-    private ShopBean bean;
+    private ImageView back,img;
+    private ShopBean.DataBean bean;
     private TextView integrate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +57,10 @@ public class ShopDetailActivity extends AppCompatActivity {
     private void initView() {
         back = (ImageView) findViewById(R.id.detail_back);
         integrate = (TextView) findViewById(R.id.detail_integrate);
+        img = (ImageView) findViewById(R.id.shopdetail_img);
 
         Intent intent = getIntent();
-        bean = (ShopBean) intent.getSerializableExtra("shopBean");
+        bean = (ShopBean.DataBean) intent.getSerializableExtra("shopBean");
+        Glide.with(this).load(UrlConfig.URL_BASE+bean.getDetailImg()).into(img);
     }
 }

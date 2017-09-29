@@ -137,13 +137,13 @@
                 android:textColor="#565555"
                 android:textSize="18sp"
                 />
-            <TextView
+            <EditText
                 android:id="@+id/register2_birth"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginLeft="30dp"
-                android:text="请选择您的生日"
+                android:hint="请选择您的生日"
                 android:textSize="16sp"
                 android:textColor="#565555"
                 android:background="@drawable/rect_null"
@@ -175,7 +175,7 @@
                 android:textColor="#565555"
                 android:textSize="18sp"
                 />
-            <TextView
+            <EditText
                 android:id="@+id/register2_pos"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -183,7 +183,7 @@
                 android:layout_marginLeft="30dp"
                 android:textSize="16sp"
                 android:textColor="#565555"
-                android:text="请选择您的位置"
+                android:hint="请选择您的位置"
                 android:background="@drawable/rect_null"
                 android:paddingTop="6dp"
                 android:paddingBottom="6dp"

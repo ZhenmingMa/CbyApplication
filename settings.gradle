@@ -1,1 +1,1 @@
-include ':app', ':BGABadgeView-master', 'BadgeView', ':PushSDK', ':PullToRefresh_Library', ':nice-spinner-master'
+include ':app', ':BGABadgeView-master', 'BadgeView', ':PushSDK', ':PullToRefresh_Library', ':nice-spinner-master', ':app1'

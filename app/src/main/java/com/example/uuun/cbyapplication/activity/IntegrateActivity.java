@@ -41,7 +41,7 @@ public class IntegrateActivity extends BaseActivity {
             , reminder, addDefault, personName, province, city, district, detail
             ,write, delete;
     private int num,id;
-    private ShopBean bean;
+    private ShopBean.DataBean bean;
     private RelativeLayout rl;
     private Address address, address1;//address网络请求下来的默认地址,address1是添加地址选择的地址
     private ImageView back;
@@ -108,9 +108,9 @@ public class IntegrateActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(IntegrateActivity.this, WriteAddressActivity.class);
                 Bundle bundle = new Bundle();
-                if(!flag){
+                if(!flag){//添加地址页面选择的地址
                     bundle.putSerializable("address", address1);
-                }else{
+                }else{//网络请求
                     bundle.putSerializable("address", address);
                 }
                 intent.putExtras(bundle);
@@ -214,13 +214,13 @@ public class IntegrateActivity extends BaseActivity {
         if (!SPUtil.getAddressFlag(this)) {
 
             Bundle bundle = intent.getExtras();
-            bean = (ShopBean) bundle.getSerializable("shopbean");
+            bean = (ShopBean.DataBean) bundle.getSerializable("shopbean");
             name.setText(bean.getName());
             color.setText("pk01");
             number.setText(bean.getPrice() + "积分");
             number.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
 //        Glide.with(context).load(bean.getImg()).into(holder.image);
-            Glide.with(this).load(bean.getImg()).into(img);
+            Glide.with(this).load(UrlConfig.URL_BASE+bean.getImg()).into(img);
             SPUtil.setShopName(this, bean.getName());
             SPUtil.setShopColor(this, "pk01");
             SPUtil.setShopNumber(this, bean.getPrice() + "积分");
@@ -248,7 +248,9 @@ public class IntegrateActivity extends BaseActivity {
             detail.setText(address1.getDetailAddress());
             district.setText(address1.getDistrict());
             id = address1.getId();
+            flag = false;
         }else{
+            flag = true;
             initData();
         }
     }
@@ -284,7 +286,7 @@ public class IntegrateActivity extends BaseActivity {
                         } else {
                             rl.setVisibility(View.GONE);
                             addDefault.setVisibility(View.VISIBLE);
-                            flag = false;
+
                         }
                     }
                 } catch (JSONException e) {

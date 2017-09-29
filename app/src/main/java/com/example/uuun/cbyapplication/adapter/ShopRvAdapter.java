@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide;
 import com.example.uuun.cbyapplication.R;
 import com.example.uuun.cbyapplication.activity.IntegrateActivity;
 import com.example.uuun.cbyapplication.bean.ShopBean;
+import com.example.uuun.cbyapplication.utils.UrlConfig;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ import java.util.List;
  */
 
 public class ShopRvAdapter extends RecyclerView.Adapter<ShopRvAdapter.MyViewHolder> implements View.OnClickListener{
-    private List<ShopBean> list = new ArrayList<>();
+    private List<ShopBean.DataBean> list = new ArrayList<>();
     private OnItemClickListener mOnItemClickListener = null;
     private Context context;
 
@@ -33,11 +34,11 @@ public class ShopRvAdapter extends RecyclerView.Adapter<ShopRvAdapter.MyViewHold
         this.context = context;
     }
 
-    public List<ShopBean> getList() {
+    public List<ShopBean.DataBean> getList() {
         return list;
     }
 
-    public void setList(List<ShopBean> list) {
+    public void setList(List<ShopBean.DataBean> list) {
         this.list = list;
     }
 
@@ -57,8 +58,9 @@ public class ShopRvAdapter extends RecyclerView.Adapter<ShopRvAdapter.MyViewHold
     }
     @Override
     public void onBindViewHolder(ShopRvAdapter.MyViewHolder holder, int position) {
-        final ShopBean bean = list.get(position);
-        Glide.with(context).load(bean.getImg()).into(holder.image);
+        final ShopBean.DataBean bean = list.get(position);
+       // String imgPath = UrlConfig.URL_BASE+bean.getImg();
+        Glide.with(context).load(UrlConfig.URL_BASE+bean.getImg()).into(holder.image);
         holder.number.setText(bean.getPrice()+"积分");
         SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
         Date date = new Date();

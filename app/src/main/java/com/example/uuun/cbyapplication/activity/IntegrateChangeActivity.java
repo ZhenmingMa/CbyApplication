@@ -19,16 +19,11 @@ import com.example.uuun.cbyapplication.myview.YtfjrProcessDialog;
 import com.example.uuun.cbyapplication.utils.MyLog;
 import com.example.uuun.cbyapplication.utils.UrlConfig;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
-import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -37,7 +32,7 @@ import java.util.List;
 public class IntegrateChangeActivity extends BaseActivity {
     private RecyclerView rv, rv_down;
     private ShopRvAdapter adapter;
-    private List<ShopBean> list;
+    private List<ShopBean.DataBean> list;
     private ImageView back;
     private Context context = MyApp.getInstance();
 
@@ -73,23 +68,12 @@ public class IntegrateChangeActivity extends BaseActivity {
             public void onSuccess(String result) {
                 MyLog.info(result);
                 MyLog.info(System.currentTimeMillis() + "");
-                try {
-                    JSONObject json = new JSONObject(result);
-                    String data = json.getString("data");
-
-                    Gson gson = new Gson();
-                    list = new ArrayList<ShopBean>();
-                    Type type = new TypeToken<ArrayList<ShopBean>>() {
-                    }.getType();
-                    list = gson.fromJson(data, type);
-                    MyLog.info(list.toString());
-                    adapter.setList(list);
-                    adapter.notifyDataSetChanged();
-
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+                Gson gson = new Gson();
+                ShopBean shopBean = gson.fromJson(result, ShopBean.class);
+                List<ShopBean.DataBean> data = shopBean.getData();
+                list.addAll(data);
+                adapter.setList(list);
+                adapter.notifyDataSetChanged();
 
             }
 
