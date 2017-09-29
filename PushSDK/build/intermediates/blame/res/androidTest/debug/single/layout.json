@@ -1,6 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\uuun\\Desktop\\CbyApplication-1\\PushSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\upush_notification.xml",
-        "source": "C:\\Users\\uuun\\Desktop\\CbyApplication-1\\PushSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\upush_notification.xml"
+        "merged": "C:\\Users\\Ma\\Desktop\\CbyApplication-1\\PushSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\upush_notification.xml",
+        "source": "C:\\Users\\Ma\\Desktop\\CbyApplication-1\\PushSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\upush_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ma\\Desktop\\CbyApplication\\PushSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\upush_notification.xml",
+        "source": "C:\\Users\\Ma\\Desktop\\CbyApplication\\PushSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\upush_notification.xml"
     }
 ]
