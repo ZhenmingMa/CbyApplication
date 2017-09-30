@@ -77,6 +77,7 @@ public class AddAddressActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(AddAddressActivity.this,GetContactsActivity.class);
                 startActivityForResult(intent,1);
+                //1111111111111111111111
             }
         });
 
