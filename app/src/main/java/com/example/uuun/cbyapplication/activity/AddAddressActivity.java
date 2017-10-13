@@ -8,14 +8,11 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bigkoo.pickerview.OptionsPickerView;
 import com.example.uuun.cbyapplication.R;
-import com.example.uuun.cbyapplication.adapter.AddLvAdapter;
-import com.example.uuun.cbyapplication.bean.Province;
 import com.example.uuun.cbyapplication.myview.YtfjrProcessDialog;
 import com.example.uuun.cbyapplication.position.ShowSpicker;
 import com.example.uuun.cbyapplication.utils.CheckUtils;
@@ -27,8 +24,6 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
-
-import java.util.List;
 
 import static com.example.uuun.cbyapplication.position.ShowSpicker.options1Items;
 import static com.example.uuun.cbyapplication.position.ShowSpicker.options2Items;
@@ -45,13 +40,8 @@ public class AddAddressActivity extends BaseActivity {
     private EditText detailAddress;
     private String text, text1,text2;//用户点击的省份,城市
     private TextView province, save;
-    private List<Province> provinces;
-    private AddLvAdapter adapter;
-    private int pId,cId;
-    private ListView lv;
-    private List<Province> city;
     private ImageView setDefault,back,readPhone;
-    private int tag = 0,mTag = 1;
+    private int tag = 0;
     private boolean flag = false;
     private String phoneNum;
     @Override
@@ -68,8 +58,6 @@ public class AddAddressActivity extends BaseActivity {
 
         x.view().inject(this); //绑定注解
     }
-
-
     private void initControl() {
 
         readPhone.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +65,7 @@ public class AddAddressActivity extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(AddAddressActivity.this,GetContactsActivity.class);
                 startActivityForResult(intent,1);
-                //1111111111111111111111
+
             }
         });
 
@@ -155,8 +143,6 @@ public class AddAddressActivity extends BaseActivity {
         setDefault = (ImageView) findViewById(R.id.addAddress_default);
         back = (ImageView) findViewById(R.id.addAddress_back);
         readPhone = (ImageView) findViewById(R.id.addAddress_readPhone);
-
-        adapter = new AddLvAdapter(this);
     }
 
     /**

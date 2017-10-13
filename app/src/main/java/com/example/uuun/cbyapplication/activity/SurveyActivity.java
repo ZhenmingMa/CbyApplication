@@ -19,7 +19,9 @@ import android.widget.TextView;
 
 import com.example.uuun.cbyapplication.R;
 import com.example.uuun.cbyapplication.bean.SurveyBean1;
+import com.example.uuun.cbyapplication.utils.MyLog;
 import com.example.uuun.cbyapplication.utils.PermissionCompat;
+import com.example.uuun.cbyapplication.utils.SPUtil;
 import com.example.uuun.cbyapplication.utils.ShareUtils;
 
 
@@ -149,6 +151,7 @@ public class SurveyActivity extends AppCompatActivity implements PermissionCompa
                 break;
             case R.id.survey_share:
                 ShareUtils.showShare(this);
+                MyLog.info("!!!!!!!!!!!!!!!!!!!!!!");
                 break;
         }
     }

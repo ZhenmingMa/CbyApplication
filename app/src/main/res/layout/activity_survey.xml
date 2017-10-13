@@ -45,21 +45,17 @@
             android:layout_marginRight="5dp"
             />
     </RelativeLayout>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-<LinearLayout
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+
     android:padding="10dp"
     >
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -162,6 +158,14 @@
             android:textSize="13sp"
             />
     </RelativeLayout>
+  </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        >
     <Button
         android:id="@+id/survey_bt"
         android:layout_width="match_parent"
@@ -170,7 +174,7 @@
         android:onClick="onClick"
         android:background="@drawable/reward_confirm"
         android:textColor="@color/lTextColor"
-        android:layout_marginTop="80dp"
+
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textSize="@dimen/textNormalSize"
@@ -194,10 +198,8 @@
         android:paddingBottom="5dp"
         android:gravity="center"
         />
-</LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"/>
-        </LinearLayout>
-    </ScrollView>
+
+    </LinearLayout>
+        </RelativeLayout>
+
 </LinearLayout>
