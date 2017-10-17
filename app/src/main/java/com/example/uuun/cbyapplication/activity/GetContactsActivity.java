@@ -45,15 +45,15 @@ public class GetContactsActivity extends BaseActivity {
         );
         lv.setAdapter(adapter);
 
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent();
-                intent.putExtra("returnPhone",list.get(i).get("phoneNum"));
-                setResult(RESULT_OK,intent);
-                finish();
-            }
-        });
+            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    Intent intent = new Intent();
+                    intent.putExtra("returnPhone",list.get(i).get("phoneNum"));
+                    setResult(RESULT_OK,intent);
+                    finish();
+                }
+            });
     }
 
     private ArrayList<HashMap<String, String>> getPeopleInPhone2(){
