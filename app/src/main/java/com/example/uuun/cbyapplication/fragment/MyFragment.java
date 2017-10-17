@@ -1,6 +1,8 @@
 package com.example.uuun.cbyapplication.fragment;
 
 import android.app.AlertDialog;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -9,7 +11,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,9 +20,9 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.uuun.cbyapplication.R;
-import com.example.uuun.cbyapplication.activity.GetContactsActivity;
 import com.example.uuun.cbyapplication.activity.LoginActivity;
 import com.example.uuun.cbyapplication.activity.MyApplyActivity;
 import com.example.uuun.cbyapplication.activity.MyFinishActivity;
@@ -38,7 +39,14 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import java.util.HashMap;
+
 import cn.bingoogolapple.badgeview.BGABadgeTextView;
+import cn.sharesdk.framework.Platform;
+import cn.sharesdk.framework.PlatformActionListener;
+import cn.sharesdk.framework.ShareSDK;
+import cn.sharesdk.onekeyshare.OnekeyShare;
+import cn.sharesdk.system.text.ShortMessage;
 
 /**
  * Created by uuun on 2017/5/27.
@@ -55,6 +63,7 @@ public class MyFragment extends Fragment {
     private PopupWindow window;
     private boolean flag;
     private BGABadgeTextView badge;
+    private  OnekeyShare oks;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -208,12 +217,45 @@ public class MyFragment extends Fragment {
                     }
                 });
 
+                copy.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        ClipboardManager cm = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
+                        // 将文本内容放到系统剪贴板里。
+                        cm.setText("分享内容啦啦啦啦");
+                        Toast.makeText(getActivity(), "复制成功，可以发给朋友们了。", Toast.LENGTH_LONG).show();
+                    }
+                });
+
                 phoneFriends.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent(getActivity(), GetContactsActivity.class);
-                        startActivity(intent);
-                        window.dismiss();
+                        //分享至短信
+
+                        Platform.ShareParams sp = new Platform.ShareParams();
+                        sp.setText("测试分享的文本");
+                       // sp.setImagePath(“/mnt/sdcard/测试分享的图片.jpg”);
+
+                        Platform sm = ShareSDK.getPlatform(ShortMessage.NAME);
+                        sm.setPlatformActionListener(new PlatformActionListener() {
+                            @Override
+                            public void onComplete(Platform platform, int i, HashMap<String, Object> hashMap) {
+
+                            }
+
+                            @Override
+                            public void onError(Platform platform, int i, Throwable throwable) {
+
+                            }
+
+                            @Override
+                            public void onCancel(Platform platform, int i) {
+
+                            }
+                        });
+
+                        sm.share(sp);
+
                     }
                 });
             }
@@ -242,18 +284,16 @@ public class MyFragment extends Fragment {
         }
         badge.hiddenBadge();
 
+
+        ShareSDK.initSDK(getActivity());
+        oks = new OnekeyShare();
+        //关闭sso授权
+        oks.disableSSOWhenAuthorize();
     }
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(FirstEvent event) {
 
         MyLog.info(System.currentTimeMillis()+event.getMsg());
-
-//        if (event.getMsg().equals("success")) {
-//            login.setVisibility(View.GONE);
-//            noLogin.setVisibility(View.VISIBLE);
-//            name.setText(MyApp.getCurrentUser().getPhone()+"");
-//            name.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
-//        }
         if(event.getMsg().equals("visible")){
             badge.showCirclePointBadge();
         }
