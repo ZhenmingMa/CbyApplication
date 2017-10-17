@@ -15,6 +15,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -48,8 +49,10 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import static com.example.uuun.cbyapplication.activity.SurveyActivity.getContentView;
@@ -87,6 +90,16 @@ public class SurvryDetailActivity extends BaseActivity {
     //存储答案list
     private List<SurveyRecord> list_commit = new ArrayList<>();
 
+    //存储填空题et
+    private Map<Integer, EditText> map = new HashMap<>();
+
+    //存储评分提image
+    private List<ImageView> star_list;
+    private Map<Integer, List<ImageView>> all_star_map = new HashMap<>();
+
+    //存储评分关键信息
+    private Map<Integer, Integer> grade_map = new HashMap<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,6 +134,7 @@ public class SurvryDetailActivity extends BaseActivity {
         button.setOnClickListener(new submitOnClickListener(list_option));
 
     }
+
     private void showPop() {
         View view1 = View.inflate(SurvryDetailActivity.this, R.layout.invite_popwindow, null);
         LinearLayout cancel = (LinearLayout) view1.findViewById(R.id.invite_cancle);
@@ -128,7 +142,7 @@ public class SurvryDetailActivity extends BaseActivity {
         LinearLayout weChat = (LinearLayout) view1.findViewById(R.id.invite_weChat);
         LinearLayout phoneFriends = (LinearLayout) view1.findViewById(R.id.invite_phone);
         //创建popupwindow为全屏
-        window = new PopupWindow(view1, WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT,true);
+        window = new PopupWindow(view1, WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT, true);
         //设置动画,就是style里创建的那个j
         window.setAnimationStyle(R.style.take_photo_anim);
         window.showAtLocation(getContentView(SurvryDetailActivity.this), Gravity.BOTTOM, 0, 0);
@@ -151,12 +165,13 @@ public class SurvryDetailActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(SurvryDetailActivity.this,GetContactsActivity.class);
+                Intent intent = new Intent(SurvryDetailActivity.this, GetContactsActivity.class);
                 startActivity(intent);
                 window.dismiss();
             }
         });
     }
+
     private void initDate() {
         try {
             Unfinish unfinish = db.findById(Unfinish.class, surveyId);
@@ -181,7 +196,7 @@ public class SurvryDetailActivity extends BaseActivity {
     }
 
     private void initDateByNet() {
-        YtfjrProcessDialog.showLoading(this,true);
+        YtfjrProcessDialog.showLoading(this, true);
         RequestParams params = new RequestParams(UrlConfig.URL_GETQUESTION);
         params.addQueryStringParameter("surveyId", surveyId + "");
         x.http().get(params, new Callback.CommonCallback<String>() {
@@ -216,7 +231,7 @@ public class SurvryDetailActivity extends BaseActivity {
 
             @Override
             public void onFinished() {
-                YtfjrProcessDialog.showLoading(SurvryDetailActivity.this,false);
+                YtfjrProcessDialog.showLoading(SurvryDetailActivity.this, false);
             }
         });
 
@@ -239,58 +254,91 @@ public class SurvryDetailActivity extends BaseActivity {
             LinearLayout add_layout = (LinearLayout) que_view.findViewById(R.id.lly_answer);
             //判断单选-多选来实现后面是*号还是*多选，
             if (list.get(i).getQuestion().getType() == 1) {
-                set(txt_que, i+1+"、"+list.get(i).getQuestion().getContent(), 1);
+                set(txt_que, i + 1 + "、" + list.get(i).getQuestion().getContent(), 1);
             }
             if (list.get(i).getQuestion().getType() == 2) {
-                set(txt_que, i+1+"、"+list.get(i).getQuestion().getContent(), 2);
+                set(txt_que, i + 1 + "、" + list.get(i).getQuestion().getContent(), 2);
             }
             if (list.get(i).getQuestion().getType() == 3) {
-                set(txt_que, i+1+"、"+list.get(i).getQuestion().getContent(), 3);
+                set(txt_que, i + 1 + "、" + list.get(i).getQuestion().getContent(), 3);
+            }
+            if (list.get(i).getQuestion().getType() == 4) {
+                set(txt_que, i + 1 + "、" + list.get(i).getQuestion().getContent(), 4);
             }
             //获得答案即第三层数据
+            if (list.get(i).getQuestion().getType() == 1 || list.get(i).getQuestion().getType() == 2) {
+                list_option = list.get(i).getQuestionOptions();
+                imglist2 = new ArrayList<ImageView>();
+                for (int j = 0; j < list_option.size(); j++) {
+                    ans_view = xInflater.inflate(R.layout.answer_layout, null);
+                    TextView txt_ans = (TextView) ans_view.findViewById(R.id.txt_answer_item);
+                    ImageView image = (ImageView) ans_view.findViewById(R.id.image);
+                    View line_view = ans_view.findViewById(R.id.vw_line);
+                    if (j == list_option.size() - 1) {
+                        //最后一条答案下面不要线是指布局的问题
+                        line_view.setVisibility(View.GONE);
+                    }
+                    //判断单选多选加载不同选项图片
+                    if (list.get(i).getQuestion().getType() == 1) {
+                        if (list_option.get(j).getAns_state() == 1) {
+                            image.setBackgroundDrawable(getResources().getDrawable(R.drawable.radio_true));
+                        } else {
+                            image.setBackgroundDrawable(getResources().getDrawable(R.drawable.radio_false));
+                        }
 
-            list_option = list.get(i).getQuestionOptions();
-
-            imglist2 = new ArrayList<ImageView>();
-            for (int j = 0; j < list_option.size(); j++) {
-                ans_view = xInflater.inflate(R.layout.answer_layout, null);
-                TextView txt_ans = (TextView) ans_view.findViewById(R.id.txt_answer_item);
-                ImageView image = (ImageView) ans_view.findViewById(R.id.image);
-                View line_view = ans_view.findViewById(R.id.vw_line);
-                if (j == list_option.size() - 1) {
-                    //最后一条答案下面不要线是指布局的问题
-                    line_view.setVisibility(View.GONE);
-                }
-                //判断单选多选加载不同选项图片
-                if (list.get(i).getQuestion().getType() == 1) {
-                    if (list_option.get(j).getAns_state() == 1) {
-                        image.setBackgroundDrawable(getResources().getDrawable(R.drawable.radio_true));
-                    } else {
-                        image.setBackgroundDrawable(getResources().getDrawable(R.drawable.radio_false));
+                    }
+                    if (list.get(i).getQuestion().getType() == 2) {
+                        if (list_option.get(j).getAns_state() == 0) {
+                            image.setBackgroundDrawable(getResources().getDrawable(R.drawable.multiselect_false));
+                        } else {
+                            image.setBackgroundDrawable(getResources().getDrawable(R.drawable.multiselect_true));
+                        }
                     }
 
-                }
-                if (list.get(i).getQuestion().getType() == 2) {
-                    if (list_option.get(j).getAns_state() == 0) {
-                        image.setBackgroundDrawable(getResources().getDrawable(R.drawable.multiselect_false));
-                    } else {
-                        image.setBackgroundDrawable(getResources().getDrawable(R.drawable.multiselect_true));
-                    }
+
+                    Log.e("---", "------" + image);
+                    imglist2.add(image);
+                    txt_ans.setText(list_option.get(j).getContent());
+                    LinearLayout lly_answer_size = (LinearLayout) ans_view.findViewById(R.id.lly_answer_size);
+                    lly_answer_size.setOnClickListener(new answerItemOnClickListener(i, j, list_option, txt_ans));
+                    add_layout.addView(ans_view);
+
                 }
 
+                imglist.add(imglist2);
+            }
 
-                Log.e("---", "------" + image);
-                imglist2.add(image);
-                txt_ans.setText(list_option.get(j).getContent());
-                LinearLayout lly_answer_size = (LinearLayout) ans_view.findViewById(R.id.lly_answer_size);
-                lly_answer_size.setOnClickListener(new answerItemOnClickListener(i, j, list_option, txt_ans));
+            if (list.get(i).getQuestion().getType() == 3) {
+                ans_view = xInflater.inflate(R.layout.answer_complete_layout, null);
+                EditText editText = (EditText) ans_view.findViewById(R.id.answer_complete_layout_et);
+                map.put(i, editText);
                 add_layout.addView(ans_view);
             }
-            /*for(int r=0; r<imglist2.size();r++){
-                Log.e("---", "imglist2--------"+imglist2.get(r));
-            }*/
 
-            imglist.add(imglist2);
+            if (list.get(i).getQuestion().getType() == 4) {
+                ans_view = xInflater.inflate(R.layout.answer_grade_layout, null);
+                final ImageView imageView_1 = (ImageView) ans_view.findViewById(R.id.survey_detail_star_1);
+                ImageView imageView_2 = (ImageView) ans_view.findViewById(R.id.survey_detail_star_2);
+                ImageView imageView_3 = (ImageView) ans_view.findViewById(R.id.survey_detail_star_3);
+                ImageView imageView_4 = (ImageView) ans_view.findViewById(R.id.survey_detail_star_4);
+                ImageView imageView_5 = (ImageView) ans_view.findViewById(R.id.survey_detail_star_5);
+                star_list = new ArrayList<>();
+                star_list.add(imageView_1);
+                star_list.add(imageView_2);
+                star_list.add(imageView_3);
+                star_list.add(imageView_4);
+                star_list.add(imageView_5);
+
+                imageView_1.setOnClickListener(new starOnClickListener(i, 1));
+                imageView_2.setOnClickListener(new starOnClickListener(i, 2));
+                imageView_3.setOnClickListener(new starOnClickListener(i, 3));
+                imageView_4.setOnClickListener(new starOnClickListener(i, 4));
+                imageView_5.setOnClickListener(new starOnClickListener(i, 5));
+
+                all_star_map.put(i,star_list);
+                add_layout.addView(ans_view);
+
+            }
 
             test_layout.addView(que_view);
         }
@@ -309,7 +357,9 @@ public class SurvryDetailActivity extends BaseActivity {
         if (type == 3) {
             w = content + "   [填空题]";
         }
-
+        if (type == 4) {
+            w = content + "   [评分题]";
+        }
         int start = content.length();
         int end = w.length();
         Spannable word = new SpannableString(w);
@@ -346,12 +396,10 @@ public class SurvryDetailActivity extends BaseActivity {
                 //多选
                 if (list_option.get(j).getAns_state() == 0) {
                     //如果未被选中
-                    txt.setBackgroundColor(Color.GRAY);
                     imglist.get(i).get(j).setBackgroundDrawable(getResources().getDrawable(R.drawable.multiselect_true));
                     list_option.get(j).setAns_state(1);
                     list.get(i).getQuestion().setQue_state(1);
                 } else {
-                    txt.setBackgroundColor(Color.WHITE);
                     imglist.get(i).get(j).setBackgroundDrawable(getResources().getDrawable(R.drawable.multiselect_false));
                     list_option.get(j).setAns_state(0);
                     int count = 0;
@@ -408,7 +456,7 @@ public class SurvryDetailActivity extends BaseActivity {
             for (int i = 0; i < list.size(); i++) {
                 list_option = list.get(i).getQuestionOptions();
                 //判断是否有题没答完
-                if (list.get(i).getQuestion().getQue_state() == 0) {
+                if (list.get(i).getQuestion().getQue_state() == 0 && list.get(i).getQuestion().getType() != 3 ) {
                     Toast.makeText(getApplicationContext(), "您第" + (i + 1) + "题没有答完", Toast.LENGTH_LONG).show();
                     isState = false;
                     break;
@@ -418,7 +466,30 @@ public class SurvryDetailActivity extends BaseActivity {
                             getAnswer(list_option.get(j));
                         }
                     }
+
                 }
+
+            }
+            for (Integer s : grade_map.keySet()) {
+                MyLog.info("aaaaaaaaaaaaaaa");
+                MyLog.info(list.get(s).getQuestion().getId()+"");
+
+                Integer tag = grade_map.get(s);
+                QuestionOptions questionOptions = new QuestionOptions();
+                questionOptions.setAns_state(1);
+                questionOptions.setQuestionId(list.get(s).getQuestion().getId());
+
+                questionOptions.setCustom(tag+"");
+                getAnswer(questionOptions);
+            }
+            for (Integer s : map.keySet()) {
+                EditText editText = map.get(s);
+                Log.e("test", editText.getText().toString());
+                QuestionOptions questionOptions = new QuestionOptions();
+                questionOptions.setAns_state(1);
+                questionOptions.setQuestionId(list.get(s).getQuestion().getId());
+                questionOptions.setCustom(editText.getText().toString());
+                getAnswer(questionOptions);
             }
 
             if (isState) {
@@ -430,7 +501,29 @@ public class SurvryDetailActivity extends BaseActivity {
 
             }
 
+        }
+    }
 
+    class starOnClickListener implements View.OnClickListener {
+        private int i, tag;
+
+        public starOnClickListener(int i, int tag) {
+            this.i = i;
+            this.tag = tag;
+        }
+
+        @Override
+        public void onClick(View view) {
+            list.get(i).getQuestion().setQue_state(1);
+            for (int j = 0; j < 5; j++) {
+                if (j <= tag - 1) {
+                    all_star_map.get(i).get(j).setImageResource(R.mipmap.star);
+
+                } else {
+                    all_star_map.get(i).get(j).setImageResource(R.mipmap.star_blank);
+                }
+            }
+            grade_map.put(i, tag);
         }
     }
 
@@ -449,20 +542,21 @@ public class SurvryDetailActivity extends BaseActivity {
 
     //提交网络请求
     public void commit() {
-        YtfjrProcessDialog.showLoading(SurvryDetailActivity.this,true);
+        YtfjrProcessDialog.showLoading(SurvryDetailActivity.this, true);
         RequestParams params = new RequestParams(UrlConfig.URL_COMMITSURVEY);
         Gson gson = new Gson();
         String s = gson.toJson(list_commit);
+        Log.e("test",s);
         params.addQueryStringParameter("list", s);
         params.addBodyParameter("token", SPUtil.getToken(SurvryDetailActivity.this));
         x.http().post(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                MyLog.info("comit---"+result);
+                MyLog.info("comit---" + result);
                 try {
                     JSONObject jsonObject = new JSONObject(result);
 
-                    if (jsonObject.getInt("code")==0) {
+                    if (jsonObject.getInt("code") == 0) {
 
                         tag = true;
 
@@ -484,7 +578,7 @@ public class SurvryDetailActivity extends BaseActivity {
                         intent.putExtra("msg", bonus);
                         startActivity(intent);
                         finish();
-                    }else{
+                    } else {
                         Toast.makeText(SurvryDetailActivity.this, "请联系客服", Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
@@ -495,7 +589,7 @@ public class SurvryDetailActivity extends BaseActivity {
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-                MyLog.info("comit---"+ex.getMessage());
+                MyLog.info("comit---" + ex.getMessage());
                 Toast.makeText(SurvryDetailActivity.this, "提交失败", Toast.LENGTH_SHORT).show();
             }
 
@@ -506,7 +600,7 @@ public class SurvryDetailActivity extends BaseActivity {
 
             @Override
             public void onFinished() {
-                YtfjrProcessDialog.showLoading(SurvryDetailActivity.this,false);
+                YtfjrProcessDialog.showLoading(SurvryDetailActivity.this, false);
             }
         });
     }
@@ -522,14 +616,14 @@ public class SurvryDetailActivity extends BaseActivity {
             //如果未提交,则保存
             if (tag == false) {
                 try {
-                    if (list!=null) {
+                    if (list != null) {
                         for (int i = 0; i < list.size(); i++) {
                             list_option = list.get(i).getQuestionOptions();
                             //判断是否有题没答完
 
                             if (list.get(i).getQuestion().getQue_state() == 0) {
 //                            break;
-                             } else {
+                            } else {
                                 for (int j = 0; j < list_option.size(); j++) {
                                     if (list_option.get(j).getAns_state() == 1) {
                                         getAnswer(list_option.get(j));
@@ -576,7 +670,7 @@ public class SurvryDetailActivity extends BaseActivity {
 
                             db.update(bean);
                         }
-                    }else{
+                    } else {
 
                     }
                 } catch (DbException e) {
@@ -586,4 +680,6 @@ public class SurvryDetailActivity extends BaseActivity {
             }
         }
     }
+
+
 }
