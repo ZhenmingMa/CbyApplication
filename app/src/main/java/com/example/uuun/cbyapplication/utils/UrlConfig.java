@@ -7,8 +7,8 @@ package com.example.uuun.cbyapplication.utils;
 public class UrlConfig {
 
     //服务器地址
-//    public final static String URL_BASE = "http://101.200.53.112:8080";
-    public final static String URL_BASE = "http://192.168.3.27:8080";
+    public final static String URL_BASE = "http://101.200.53.112:8080";
+//    public final static String URL_BASE = "http://192.168.3.27:8080";
 
     //注册接口
     public final static String URL_REGISIT = URL_BASE+"/regisit";
