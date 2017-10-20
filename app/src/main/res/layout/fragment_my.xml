@@ -119,57 +119,47 @@
         android:background="@color/lTextColor">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="9dp"
             android:text="@string/my_finish"
             android:drawableLeft="@mipmap/my_finish"
+            android:drawableRight="@mipmap/next"
             android:drawablePadding="9dp"
             android:textColor="#565656"
-            android:textSize="19sp" />
-        <ImageView
-            android:layout_width="11dp"
-            android:layout_height="20dp"
-            android:src="@mipmap/next"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            />
+            android:textSize="16sp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/my_loading_rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="2dp"
         android:background="@color/lTextColor">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/my_unfinish"/>
-
 
         <cn.bingoogolapple.badgeview.BGABadgeTextView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/badgeView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/my_unfinish"
+            android:drawableRight="@mipmap/next"
+            android:drawablePadding="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp"
             android:text="未完成的调研"
             android:textColor="#565656"
-            android:textSize="19sp"
+            android:textSize="16sp"
             app:badge_dragable="true"
             app:badge_gravity="rightTop"
-            app:badge_padding="4dp" />
-        <ImageView
-            android:layout_width="11dp"
-            android:layout_height="20dp"
-            android:src="@mipmap/next"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            />
+            android:layout_alignParentTop="true"
+   />
+
     </RelativeLayout>
 
 
@@ -178,86 +168,87 @@
         android:id="@+id/my_invite_rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="8dp"
         android:background="@color/lTextColor">
-
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp"
             android:text="@string/account_reward_friends"
+            android:drawableLeft="@mipmap/my_invite"
+            android:drawableRight="@mipmap/next"
+            android:drawablePadding="9dp"
             android:textColor="#565656"
-            android:textSize="19sp" />
+            android:textSize="16sp" />
+
     </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/my_news_rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lTextColor"
-        android:layout_marginTop="3dp"
-        >
-
+        android:layout_marginTop="2dp"
+        android:background="@color/lTextColor">
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp"
             android:text="我的消息"
+            android:drawableLeft="@mipmap/my_message"
+            android:drawableRight="@mipmap/next"
+            android:drawablePadding="9dp"
             android:textColor="#565656"
-            android:textSize="19sp" />
-        <ImageView
-            android:layout_width="11dp"
-            android:layout_height="20dp"
-            android:src="@mipmap/next"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            />
+            android:textSize="16sp" />
+
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="2dp"
         android:background="@color/lTextColor">
-
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp"
             android:text="@string/my_about"
+            android:drawableLeft="@mipmap/my_about"
+            android:drawableRight="@mipmap/next"
+            android:drawablePadding="9dp"
             android:textColor="#565656"
-            android:textSize="19sp" />
-        <ImageView
-            android:layout_width="11dp"
-            android:layout_height="20dp"
-            android:src="@mipmap/next"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            />
+            android:textSize="16sp" />
+
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/my_apply_rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="2dp"
         android:background="@color/lTextColor">
-
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="9dp"
             android:text="@string/my_apply"
+            android:drawableLeft="@mipmap/my_apply"
+            android:drawableRight="@mipmap/next"
+            android:drawablePadding="9dp"
             android:textColor="#565656"
-            android:textSize="19sp" />
-        <ImageView
-            android:layout_width="11dp"
-            android:layout_height="20dp"
-            android:src="@mipmap/next"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            />
+            android:textSize="16sp" />
+
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
