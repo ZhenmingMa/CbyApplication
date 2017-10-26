@@ -13,50 +13,52 @@
         android:background="@color/themeColor">
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="9dp"
+            android:layout_height="16dp"
             android:src="@mipmap/back"
             android:id="@+id/myApply_back"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="10dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="12dp"
             android:text="@string/my_apply"
             android:textColor="@color/lTextColor"
-            android:textSize="21sp" />
+            android:textSize="18sp" />
 
     </RelativeLayout>
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="156dp"
+        android:layout_height="130dp"
         android:src="@mipmap/banner"
         android:scaleType="fitXY" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp">
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="40dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="*"
-            android:textColor="#f66" />
+            android:textColor="#f66"
+            android:textSize="18sp"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/apply_name"
             android:textColor="#9F9F9F"
-            android:textSize="15sp" />
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/apply_name"
@@ -71,14 +73,14 @@
 <TextView
     android:layout_width="match_parent"
     android:layout_height="0.5dp"
-    android:background="@color/defaultTextColor"
+    android:background="@color/lineColor"
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="11dp"
         android:layout_marginTop="10dp"
         >
 
@@ -86,13 +88,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="*"
-            android:textColor="#f66" />
+            android:textColor="#f66"
+            android:textSize="18sp"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/apply_phone"
-            android:textSize="15sp"
+            android:textSize="18sp"
             android:textColor="#9F9F9F"
             />
 
@@ -111,14 +115,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/defaultTextColor"
+        android:background="@color/lineColor"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="11dp"
         android:layout_marginTop="10dp"
         >
 
@@ -126,7 +130,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="  公司联系邮箱:"
-            android:textSize="15sp"
+            android:textSize="18sp"
             android:textColor="#9F9F9F"
             />
 
@@ -145,7 +149,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/defaultTextColor"
+        android:background="@color/lineColor"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         />

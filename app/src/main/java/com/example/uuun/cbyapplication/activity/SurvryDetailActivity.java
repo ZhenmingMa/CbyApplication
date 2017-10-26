@@ -1,5 +1,6 @@
 package com.example.uuun.cbyapplication.activity;
 
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -54,6 +55,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import cn.sharesdk.framework.Platform;
+import cn.sharesdk.framework.PlatformActionListener;
+import cn.sharesdk.framework.ShareSDK;
+import cn.sharesdk.system.text.ShortMessage;
 
 import static com.example.uuun.cbyapplication.activity.SurveyActivity.getContentView;
 
@@ -161,13 +167,45 @@ public class SurvryDetailActivity extends BaseActivity {
                 window.dismiss();
             }
         });
+        copy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ClipboardManager cm = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
+                // 将文本内容放到系统剪贴板里。
+                cm.setText("分享内容啦啦啦啦");
+                Toast.makeText(SurvryDetailActivity.this, "复制成功，可以发给朋友们了。", Toast.LENGTH_LONG).show();
+            }
+        });
+
         phoneFriends.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //分享至短信
 
-                Intent intent = new Intent(SurvryDetailActivity.this, GetContactsActivity.class);
-                startActivity(intent);
-                window.dismiss();
+                Platform.ShareParams sp = new Platform.ShareParams();
+                sp.setText("测试分享的文本");
+                // sp.setImagePath(“/mnt/sdcard/测试分享的图片.jpg”);
+
+                Platform sm = ShareSDK.getPlatform(ShortMessage.NAME);
+                sm.setPlatformActionListener(new PlatformActionListener() {
+                    @Override
+                    public void onComplete(Platform platform, int i, HashMap<String, Object> hashMap) {
+
+                    }
+
+                    @Override
+                    public void onError(Platform platform, int i, Throwable throwable) {
+
+                    }
+
+                    @Override
+                    public void onCancel(Platform platform, int i) {
+
+                    }
+                });
+
+                sm.share(sp);
+
             }
         });
     }

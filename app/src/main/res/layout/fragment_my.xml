@@ -72,10 +72,11 @@
                 android:id="@+id/my_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="18dp"
                 android:text="用户名"
                 android:textColor="#565656"
-                android:textSize="22sp" />
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -90,10 +91,13 @@
                     android:layout_marginTop="80dp"
                     android:background="@drawable/reward_confirm"
                     android:gravity="center"
-                    android:padding="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
                     android:text="@string/my_change"
                     android:textColor="@color/lTextColor"
-                    android:textSize="@dimen/textNormalSize" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/my_login_exit"
@@ -103,10 +107,13 @@
                     android:layout_marginTop="80dp"
                     android:background="@drawable/reward_confirm"
                     android:gravity="center"
-                    android:padding="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
                     android:text="@string/my_out"
                     android:textColor="@color/lTextColor"
-                    android:textSize="@dimen/textNormalSize" />
+                    android:textSize="16sp" />
             </LinearLayout>
         </RelativeLayout>
     </RelativeLayout>

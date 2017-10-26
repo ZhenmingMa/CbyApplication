@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,9 +50,9 @@ public class RewardFragment extends Fragment {
     private TextView mMoney;
     private String money = "20";
     private TextView getAlipay, allReward, answerReward, inviteReward,transferred,auditing;
-    private RelativeLayout reward_1, reward_2;
+    private LinearLayout reward_1;
+    private RelativeLayout  reward_2;
     private NiceSpinner spinner;
-    //private boolean flag = false;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -214,7 +215,7 @@ public class RewardFragment extends Fragment {
         inviteReward = (TextView) view.findViewById(R.id.fragrewad_inviteBonus_tv);
         transferred = (TextView) view.findViewById(R.id.fragrewad_transferred_tv);
         auditing = (TextView) view.findViewById(R.id.fragrewad_auditing_tv);
-        reward_1 = (RelativeLayout) view.findViewById(R.id.reward_1);
+        reward_1 = (LinearLayout) view.findViewById(R.id.reward_1);
         reward_2 = (RelativeLayout) view.findViewById(R.id.reward_2);
         spinner = (NiceSpinner) view.findViewById(R.id.reward_spinner);
 

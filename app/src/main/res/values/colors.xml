@@ -10,4 +10,6 @@
     <color name="rectangleColor">#D5D5D5</color>
     <color name="yellow">#FF9900</color>
     <color name="defaultTextColor">#BFBFBF</color>
+    <color name="lineColor">#E0E0E0</color>
+    <color name="themeBackground">#E0E0E0</color>
 </resources>

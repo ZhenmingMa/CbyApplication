@@ -12,23 +12,23 @@
         android:background="@color/themeColor"
         >
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="9dp"
+            android:layout_height="16dp"
             android:src="@mipmap/back"
             android:id="@+id/myFinish_back"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="13dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="11dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/my_finish"
             android:textColor="@color/lTextColor"
-            android:textSize="21sp"
+            android:textSize="18sp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="12dp"
             />
     </RelativeLayout>
     <ListView
@@ -37,5 +37,6 @@
         android:layout_height="match_parent"
         android:divider="#00000000"
         android:dividerHeight="3dp"
+        android:layout_marginTop="3dp"
         />
 </LinearLayout>

@@ -12,27 +12,32 @@
         android:background="@color/themeColor"
         >
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="9dp"
+            android:layout_height="16dp"
             android:src="@mipmap/back"
             android:id="@+id/myLoading_back"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="13dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="10dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/my_loading"
             android:textColor="@color/lTextColor"
-            android:textSize="21sp"
+            android:textSize="18sp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="12dp"
             />
     </RelativeLayout>
     <ListView
         android:id="@+id/myloading_lv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:background="#EEEEEE"
+        android:layout_marginTop="5dp"
+        android:divider="@color/lineColor"
+        android:dividerHeight="0.5dp"
+        />
 </LinearLayout>

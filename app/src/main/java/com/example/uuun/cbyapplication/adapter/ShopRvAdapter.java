@@ -2,6 +2,7 @@ package com.example.uuun.cbyapplication.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -68,6 +69,7 @@ public class ShopRvAdapter extends RecyclerView.Adapter<ShopRvAdapter.MyViewHold
         String time = sdf.format(date);
         holder.time.setText(time+"准时抢购");
         holder.name.setText(bean.getName());
+        holder.name.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
         holder.itemView.setTag(position);
         holder.integrate.setOnClickListener(new View.OnClickListener() {
             @Override

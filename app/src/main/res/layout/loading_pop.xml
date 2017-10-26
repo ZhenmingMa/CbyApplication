@@ -17,8 +17,8 @@
         android:paddingLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@color/lTextColor"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
         android:text="删 除"
         android:textColor="@color/moneyColor"
         android:textSize="@dimen/textNormalSize" />
@@ -32,8 +32,8 @@
         android:layout_marginRight="10dp"
         android:paddingLeft="10dp"
         android:background="@color/lTextColor"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
         android:text="取 消"
         android:textColor="@color/moneyColor"
         android:textSize="@dimen/textNormalSize" />

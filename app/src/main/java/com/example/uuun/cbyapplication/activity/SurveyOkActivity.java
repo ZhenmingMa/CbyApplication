@@ -1,6 +1,7 @@
 package com.example.uuun.cbyapplication.activity;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.view.View;
@@ -75,5 +76,6 @@ public class SurveyOkActivity extends BaseActivity {
         Intent intent = getIntent();
         double money = intent.getDoubleExtra("msg", 0.0);
         moneyGet.setText("提交完成,恭喜获得" + money + "元");
+        share.getPaint().setFlags(Paint. UNDERLINE_TEXT_FLAG ); //下划线
     }
 }

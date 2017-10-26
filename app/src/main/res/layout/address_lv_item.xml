@@ -10,31 +10,31 @@
     android:layout_height="wrap_content"
     android:id="@+id/address_item_name"
     android:textColor="#272727"
-    android:textSize="18sp"
-    android:layout_marginTop="8dp"
-    android:layout_marginLeft="12dp"
+    android:textSize="15sp"
+    android:layout_marginTop="11dp"
+    android:layout_marginLeft="11dp"
     />
     <LinearLayout
         android:id="@+id/address_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/address_item_name"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="11dp"
 
         >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/address_province"
-        android:textSize="15sp"
+        android:textSize="13sp"
         android:textColor="#272727"
         />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/address_city"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:layout_marginLeft="5dp"
             android:textColor="#272727"
             />
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/address_district"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:layout_marginLeft="5dp"
             android:textColor="#272727"
             />
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/address_detail"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:layout_marginLeft="5dp"
             android:textColor="#272727"
             />
@@ -62,21 +62,21 @@
         android:id="@+id/address_item_phone"
         android:layout_alignParentRight="true"
         android:textColor="#272727"
-        android:textSize="15sp"
-        android:layout_marginTop="10dp"
+        android:textSize="13sp"
+        android:layout_marginTop="14dp"
         android:layout_marginRight="6dp"
 
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/defaultTextColor"
+        android:background="@color/lineColor"
         android:layout_below="@id/address_ll"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="3dp"
         />
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="35dp"
         android:layout_below="@id/address_ll"
         >
     <LinearLayout
@@ -84,15 +84,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="19dp"
         android:layout_marginRight="6dp"
         >
         <ImageView
 
-            android:layout_width="13dp"
-            android:layout_height="13dp"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_marginTop="4dp"
             android:src="@mipmap/address_edit"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="5dp"
             />
         <TextView
@@ -100,35 +100,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/address_write"
-            android:textSize="13sp"
+            android:textSize="11sp"
             android:textColor="#424141"
             android:layout_gravity="bottom"
             />
         <ImageView
 
-            android:layout_width="13dp"
+            android:layout_width="14dp"
             android:layout_height="13dp"
             android:src="@mipmap/address_delete"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
             />
         <TextView
             android:id="@+id/address_item_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/address_delete"
-            android:textSize="13sp"
+            android:textSize="11sp"
             android:textColor="#424141"
             android:layout_gravity="bottom"
             />
     </LinearLayout>
         <ImageView
             android:id="@+id/address_lv_item_check"
-            android:layout_width="13dp"
-            android:layout_height="13dp"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
             android:src="@mipmap/nocheck"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="12dp"
             android:layout_marginLeft="14dp"
             />
     <TextView
@@ -136,8 +136,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:text="设为默认"
-        android:layout_marginTop="24dp"
-        android:textSize="13sp"
+        android:layout_marginTop="19dp"
+        android:textSize="11sp"
         android:textColor="#424141"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@id/address_lv_item_check"

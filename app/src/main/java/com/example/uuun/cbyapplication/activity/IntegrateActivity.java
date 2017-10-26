@@ -18,6 +18,7 @@ import com.example.uuun.cbyapplication.bean.Address;
 import com.example.uuun.cbyapplication.bean.ShopBean;
 import com.example.uuun.cbyapplication.myapp.MyApp;
 import com.example.uuun.cbyapplication.myview.YtfjrProcessDialog;
+import com.example.uuun.cbyapplication.utils.MyLog;
 import com.example.uuun.cbyapplication.utils.SPUtil;
 import com.example.uuun.cbyapplication.utils.UrlConfig;
 import com.google.gson.Gson;
@@ -39,13 +40,14 @@ public class IntegrateActivity extends BaseActivity {
     private ImageView img;
     private TextView name, color, number, jian, jia, mNumber, addAddress, commit
             , reminder, addDefault, personName, province, city, district, detail
-            ,write, delete;
+            ,write, delete,phone;
     private int num,id;
     private ShopBean.DataBean bean;
     private RelativeLayout rl;
     private Address address, address1;//address网络请求下来的默认地址,address1是添加地址选择的地址
     private ImageView back;
     private boolean flag;
+    private List<Address> list_address;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,9 +111,10 @@ public class IntegrateActivity extends BaseActivity {
                 Intent intent = new Intent(IntegrateActivity.this, WriteAddressActivity.class);
                 Bundle bundle = new Bundle();
                 if(!flag){//添加地址页面选择的地址
-                    bundle.putSerializable("address", address1);
+                    bundle.putSerializable("address11", address1);
                 }else{//网络请求
-                    bundle.putSerializable("address", address);
+                    bundle.putSerializable("address11", list_address.get(0));
+
                 }
                 intent.putExtras(bundle);
                 startActivity(intent);
@@ -206,6 +209,7 @@ public class IntegrateActivity extends BaseActivity {
         delete = (TextView) findViewById(R.id.integrate_deleteAddress);
         district = (TextView) findViewById(R.id.integrate_address_district);
         back = (ImageView) findViewById(R.id.integrate_back);
+        phone = (TextView) findViewById(R.id.integrate_item_phone);
 
         Intent intent = getIntent();
 
@@ -266,10 +270,11 @@ public class IntegrateActivity extends BaseActivity {
                     if (json.getInt("code") == 0) {
                         JSONArray jsonArray = json.getJSONArray("data");
                         Gson gson = new Gson();
-                        List<Address> list_address = new ArrayList<Address>();
+                        list_address = new ArrayList<Address>();
                         for (int i = 0; i <= jsonArray.length() - 1; i++) {
                             JSONObject json1 = jsonArray.getJSONObject(i);
                             address = gson.fromJson(json1.toString(), Address.class);
+                            MyLog.info("!!!!!!!!!!!!!!!!!"+address.toString());
                             if (address.isCurrent()) {
                                 list_address.add(address);
                             }
@@ -283,6 +288,7 @@ public class IntegrateActivity extends BaseActivity {
                             city.setText(list_address.get(0).getCity());
                             detail.setText(list_address.get(0).getDetailAddress());
                             district.setText(list_address.get(0).getDistrict());
+                            phone.setText(list_address.get(0).getPhone());
                         } else {
                             rl.setVisibility(View.GONE);
                             addDefault.setVisibility(View.VISIBLE);

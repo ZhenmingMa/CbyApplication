@@ -200,7 +200,7 @@ public class WriteAddressActivity extends BaseActivity {
         adapter = new AddLvAdapter(this);
 
         Intent intent = getIntent();
-        address = (Address) intent.getSerializableExtra("address");
+        address = (Address) intent.getSerializableExtra("address11");
         String name = address.getName();
         String phone = address.getPhone();
         String province = address.getProvince();

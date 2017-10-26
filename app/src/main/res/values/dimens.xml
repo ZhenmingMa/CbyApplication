@@ -3,8 +3,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="textLargeSize">25sp</dimen>
-    <dimen name="textSmallSize">15sp</dimen>
+    <dimen name="textSmallSize">13sp</dimen>
     <dimen name="textNormalSize">20sp</dimen>
     <dimen name="editTextPadding">10dp</dimen>
-    <dimen name="layoutTop">45dp</dimen>
+    <dimen name="layoutTop">41dp</dimen>
 </resources>

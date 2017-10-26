@@ -16,10 +16,10 @@
             android:layout_height="wrap_content"
             android:text="@string/login_login"
             android:textColor="@color/lTextColor"
-            android:textSize="21sp"
+            android:textSize="18sp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="12dp"
             />
     </RelativeLayout>
 

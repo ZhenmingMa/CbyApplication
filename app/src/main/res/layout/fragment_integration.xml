@@ -14,7 +14,7 @@
         />
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="135dp"
+        android:layout_height="113dp"
         android:background="@mipmap/integration_background"
         >
 
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="0积分"
             android:textColor="@color/lTextColor"
-            android:textSize="25sp"
+            android:textSize="21sp"
             android:layout_centerInParent="true"
 
             />
@@ -39,26 +39,25 @@
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:background="@drawable/reward_shape"
             >
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="6dp"
+                android:layout_height="16dp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="3dp"
+                android:layout_marginLeft="4dp"
                 android:src="@mipmap/blue_img" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/account_reward_get"
-            android:textSize="@dimen/textNormalSize"
-            android:textColor="@color/normalTextColor"
+            android:textSize="16sp"
+            android:textColor="#5F5E5E"
             android:gravity="center_vertical"
-            android:paddingLeft="5dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
+            android:layout_marginLeft="9dp"
+            android:paddingTop="12dp"
             />
             </LinearLayout>
         <RelativeLayout
@@ -66,15 +65,14 @@
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="47dp"
                 android:text="@string/account_integration_login"
-                android:textSize="@dimen/textNormalSize"
-                android:textColor="@color/normalTextColor"
+                android:textSize="16sp"
+                android:textColor="#5F5E5E"
                 android:background="@drawable/reward_shape_null1"
                 android:gravity="center_vertical"
-                android:paddingLeft="5dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+
                 />
             <TextView
                 android:id="@+id/integration_login"
@@ -85,11 +83,12 @@
                 android:layout_centerVertical="true"
                 android:textColor="@color/lTextColor"
                 android:background="@drawable/radius_bg2"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="3dp"
                 android:paddingTop="3dp"
                 android:paddingBottom="3dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
+                android:textSize="16sp"
                 />
         </RelativeLayout>
         <RelativeLayout
@@ -97,15 +96,14 @@
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="47dp"
                 android:text="@string/account_integration_share"
-                android:textSize="@dimen/textNormalSize"
-                android:textColor="@color/normalTextColor"
+                android:textSize="16sp"
+                android:textColor="#5F5E5E"
                 android:background="@drawable/reward_shape_null1"
                 android:gravity="center_vertical"
-                android:paddingLeft="5dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+
                 />
             <TextView
                 android:id="@+id/integration_share"
@@ -116,11 +114,12 @@
                 android:layout_centerVertical="true"
                 android:textColor="@color/lTextColor"
                 android:background="@drawable/radius_bg2"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="3dp"
                 android:paddingTop="3dp"
                 android:paddingBottom="3dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
+                android:textSize="16sp"
                 />
         </RelativeLayout>
         <RelativeLayout
@@ -128,15 +127,13 @@
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="47dp"
                 android:text="已兑换"
-                android:textSize="@dimen/textNormalSize"
-                android:textColor="@color/normalTextColor"
+                android:textSize="16sp"
+                android:textColor="#5F5E5E"
                 android:background="@drawable/reward_shape_null1"
                 android:gravity="center_vertical"
-                android:paddingLeft="5dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
                 />
             <TextView
                 android:id="@+id/integration_get"
@@ -147,11 +144,12 @@
                 android:layout_centerVertical="true"
                 android:textColor="@color/lTextColor"
                 android:background="@drawable/radius_bg2"
-                android:layout_marginRight="5dp"
+                android:layout_marginRight="3dp"
                 android:paddingTop="3dp"
                 android:paddingBottom="3dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
+                android:textSize="16sp"
                 />
         </RelativeLayout>
     </LinearLayout>
@@ -169,30 +167,30 @@
         >
         <ImageView
             android:id="@+id/iv1"
-            android:layout_width="17dp"
-            android:layout_height="18dp"
+            android:layout_width="15dp"
+            android:layout_height="16dp"
             android:src="@mipmap/integrate_gift"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="7dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/account_integration_change"
-            android:textSize="@dimen/textNormalSize"
-            android:textColor="@color/normalTextColor"
-            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textColor="#5F5E5E"
+            android:layout_marginTop="12dp"
             android:layout_toRightOf="@id/iv1"
             />
         <ImageView
-            android:layout_width="11dp"
-            android:layout_height="20dp"
+            android:layout_width="10dp"
+            android:layout_height="17dp"
             android:src="@mipmap/next"
             android:layout_alignParentRight="true"
             android:layout_marginTop="15dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="17dp"
             />
     </RelativeLayout>
     <TextView
@@ -208,30 +206,30 @@
         >
         <ImageView
             android:id="@+id/iv2"
-            android:layout_width="17dp"
-            android:layout_height="18dp"
+            android:layout_width="16dp"
+            android:layout_height="15dp"
             android:src="@mipmap/integrate_record"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="7dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/account_integration_record"
-            android:textSize="@dimen/textNormalSize"
-            android:textColor="@color/normalTextColor"
-            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textColor="#5F5E5E"
+            android:layout_marginTop="12dp"
             android:layout_toRightOf="@id/iv2"
             />
         <ImageView
-            android:layout_width="11dp"
-            android:layout_height="20dp"
+            android:layout_width="10dp"
+            android:layout_height="17dp"
             android:src="@mipmap/next"
             android:layout_alignParentRight="true"
             android:layout_marginTop="15dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="17dp"
             />
     </RelativeLayout>
     <TextView
@@ -247,30 +245,30 @@
         >
         <ImageView
             android:id="@+id/iv3"
-            android:layout_width="17dp"
-            android:layout_height="18dp"
+            android:layout_width="16dp"
+            android:layout_height="15dp"
             android:src="@mipmap/integrate_address"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="7dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/account_integration_address"
-            android:textSize="@dimen/textNormalSize"
-            android:textColor="@color/normalTextColor"
-            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textColor="#5F5E5E"
+            android:layout_marginTop="12dp"
             android:layout_toRightOf="@id/iv3"
             />
         <ImageView
-            android:layout_width="11dp"
-            android:layout_height="20dp"
+            android:layout_width="10dp"
+            android:layout_height="17dp"
             android:src="@mipmap/next"
             android:layout_alignParentRight="true"
             android:layout_marginTop="15dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="17dp"
             />
     </RelativeLayout>
     <TextView
@@ -286,30 +284,30 @@
         >
         <ImageView
             android:id="@+id/iv4"
-            android:layout_width="17dp"
-            android:layout_height="18dp"
+            android:layout_width="16dp"
+            android:layout_height="15dp"
             android:src="@mipmap/integrate_express"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="7dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/account_integration_gift"
-            android:textSize="@dimen/textNormalSize"
-            android:textColor="@color/normalTextColor"
-            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textColor="#5F5E5E"
+            android:layout_marginTop="12dp"
             android:layout_toRightOf="@id/iv4"
             />
         <ImageView
-            android:layout_width="11dp"
-            android:layout_height="20dp"
+            android:layout_width="10dp"
+            android:layout_height="17dp"
             android:src="@mipmap/next"
             android:layout_alignParentRight="true"
             android:layout_marginTop="15dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="17dp"
             />
     </RelativeLayout>
     <TextView

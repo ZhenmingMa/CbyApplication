@@ -12,13 +12,13 @@
         android:background="@color/themeColor"
         >
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="9dp"
+            android:layout_height="16dp"
             android:src="@mipmap/back"
             android:id="@+id/integrate_back"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="11dp"
             />
         <TextView
             android:id="@+id/home_head"
@@ -26,10 +26,10 @@
             android:layout_height="wrap_content"
             android:text="确认换购"
             android:textColor="@color/lTextColor"
-            android:textSize="21sp"
+            android:textSize="18sp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="12dp"
             />
         <TextView
             android:id="@+id/integrate_addAddress"
@@ -40,7 +40,7 @@
             android:textSize="@dimen/textSmallSize"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="12dp"
             android:layout_marginRight="5dp"
             />
     </RelativeLayout>
@@ -58,30 +58,30 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/integrate_address_name"
                 android:textColor="#272727"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:layout_marginTop="13dp"
-                android:layout_marginLeft="13dp"
+                android:layout_marginLeft="11dp"
                 />
             <LinearLayout
                 android:id="@+id/address_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/integrate_address_name"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="13dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="11dp"
                 >
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/integrate_address_province"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
                     android:textColor="#272727"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/integrate_address_city"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
                     android:textColor="#272727"
                     android:layout_marginLeft="5dp"
                     />
@@ -89,7 +89,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/integrate_address_district"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
                     android:textColor="#272727"
                     android:layout_marginLeft="5dp"
                     />
@@ -97,7 +97,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/integrate_address_detail"
-                    android:textSize="15sp"
+                    android:textSize="13sp"
                     android:layout_marginLeft="5dp"
                     android:textColor="#272727"
                     />
@@ -106,23 +106,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/address_item_phone"
+                android:id="@+id/integrate_item_phone"
                 android:layout_alignParentRight="true"
                 android:textColor="#272727"
-                android:textSize="15sp"
-                android:layout_marginTop="10dp"
+                android:textSize="13sp"
+                android:layout_marginTop="13dp"
                 android:layout_marginRight="6dp"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="@color/defaultTextColor"
+                android:background="@color/lineColor"
                 android:layout_below="@id/address_ll"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="3dp"
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:layout_below="@id/address_ll"
                 >
                 <LinearLayout
@@ -130,15 +130,15 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="19dp"
                     android:layout_marginRight="6dp"
                     >
                     <ImageView
 
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
+                        android:layout_width="11dp"
+                        android:layout_height="11dp"
                         android:src="@mipmap/address_edit"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="4dp"
                         android:layout_marginRight="5dp"
                         />
                     <TextView
@@ -146,25 +146,25 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/address_write"
-                        android:textSize="13sp"
+                        android:textSize="11sp"
                         android:textColor="#424141"
                         android:layout_gravity="bottom"
                         />
                     <ImageView
 
-                        android:layout_width="13dp"
+                        android:layout_width="14dp"
                         android:layout_height="13dp"
                         android:src="@mipmap/address_delete"
                         android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="3dp"
                         />
                     <TextView
                         android:id="@+id/integrate_deleteAddress"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/address_delete"
-                        android:textSize="13sp"
+                        android:textSize="11sp"
                         android:textColor="#424141"
                         android:layout_gravity="bottom"
                         />
@@ -199,18 +199,17 @@
         android:layout_marginLeft="5dp"
         >
         <ImageView
-            android:layout_width="96dp"
-            android:layout_height="86dp"
+            android:layout_width="81dp"
+            android:layout_height="72dp"
             android:scaleType="fitXY"
             android:id="@+id/integrate_iv"
             android:src="@mipmap/ic_launcher"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
             />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:orientation="vertical"
             >
             <TextView
@@ -218,14 +217,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#272727"
-                android:textSize="18sp"
+                android:textSize="15sp"
             />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/integrate_color"
-                android:layout_marginTop="5dp"
-                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:textSize="13sp"
                 android:textColor="#646060"
                 />
             <TextView
@@ -233,30 +232,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#FD2929"
-                android:textSize="18sp"
-                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:layout_marginTop="15dp"
                 />
         </LinearLayout>
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="12dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="数量"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:textColor="#272727"
+            android:layout_marginTop="10dp"
             />
         <LinearLayout
             android:id="@+id/integrate_ll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="5dp"
+            android:layout_marginRight="8dp"
             >
         <TextView
             android:id="@+id/integrate_jian"
@@ -268,7 +268,7 @@
             android:paddingLeft="25dp"
             android:paddingTop="8dp"
             android:paddingBottom="8dp"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:textColor="@color/moneyColor"
             />
             <TextView
@@ -281,7 +281,7 @@
                 android:paddingLeft="25dp"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:textColor="#272727"
                 />
             <TextView
@@ -294,7 +294,7 @@
                 android:paddingLeft="25dp"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 android:textColor="@color/moneyColor"
                 />
         </LinearLayout>
@@ -308,15 +308,15 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="12dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="账户余额"
             android:textColor="#272727"
-            android:textSize="18sp"
+            android:textSize="15sp"
             />
         <TextView
             android:id="@+id/integrate_reminder"
@@ -324,7 +324,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:textColor="#272727"
-            android:textSize="18sp"
+            android:textSize="15sp"
+            android:layout_marginRight="7dp"
             />
     </RelativeLayout>
     <TextView
@@ -336,11 +337,11 @@
         android:textSize="19sp"
         android:gravity="center"
         android:background="@drawable/reward_confirm"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+        android:paddingTop="17dp"
+        android:paddingBottom="17dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="80dp"
         />
 </LinearLayout>
 </LinearLayout>

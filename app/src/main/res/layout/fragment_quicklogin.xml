@@ -14,15 +14,16 @@
         />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="95dp"
         android:background="@color/lTextColor"
         android:orientation="vertical"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="22dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:orientation="horizontal"
+
             >
         <EditText
             android:layout_width="0dp"
@@ -30,11 +31,11 @@
             android:layout_weight="1"
             android:hint="手机号"
             android:id="@+id/quick_phone"
-            android:textSize="19sp"
+            android:textSize="16sp"
             android:background="@null"
-            android:paddingTop="10dp"
+            android:paddingTop="12dp"
             android:paddingBottom="10dp"
-            android:layout_marginLeft="7dp"
+            android:layout_marginLeft="8dp"
             android:imeOptions="actionNext"
             android:singleLine="true"
             android:inputType="number"
@@ -47,12 +48,12 @@
                 android:background="@drawable/reward_confirm"
                 android:text="获取验证码"
                 android:textColor="@color/lTextColor"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
                 android:layout_marginRight="5dp"
-
+                android:textSize="16sp"
                 android:gravity="center_vertical"
                 />
         </LinearLayout>
@@ -66,13 +67,13 @@
             />
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="47dp"
             android:hint="验证码"
             android:id="@+id/quick_identify"
             android:background="@null"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:layout_marginLeft="7dp"
+
+            android:layout_marginLeft="9dp"
+            android:textSize="16sp"
             android:singleLine="true"
             android:inputType="number"
             android:digits="1234567890"
@@ -81,7 +82,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="34dp"
         android:gravity="center_horizontal"
         >
         <TextView
@@ -91,11 +92,11 @@
             android:text="登 录"
             android:textColor="@color/lTextColor"
             android:background="@drawable/reward_confirm"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="13dp"
             android:layout_marginRight="40dp"
             android:layout_marginLeft="40dp"
-            android:textSize="19sp"
+            android:textSize="16sp"
             android:layout_marginTop="30dp"
             android:gravity="center"
             />
@@ -103,7 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="还没账号,点我注册"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:id="@+id/quick_register"
             android:layout_alignRight="@id/quick_login"
             android:layout_below="@id/quick_login"
@@ -139,7 +140,7 @@
                 android:text="第三方登录"
                 android:textColor="#636363"
                 android:gravity="center"
-                android:textSize="18sp"
+                android:textSize="15sp"
                 />
             <TextView
                 android:layout_width="0dp"
@@ -156,8 +157,8 @@
 
             >
             <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
                 android:src="@mipmap/login_weixin"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"

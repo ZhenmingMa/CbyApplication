@@ -6,14 +6,14 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_margin="15dp"
+    android:layout_margin="10dp"
     >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/top_rv_name"
         android:textColor="#0A99FF"
-        android:textSize="17sp"
+        android:textSize="14sp"
         />
 
 
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/require_age"
         android:textColor="#3B3B3B"
-        android:textSize="15sp"
+        android:textSize="12sp"
         />
         <TextView
             android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
             android:text="男"
             android:textColor="@color/normalTextColor"
             android:layout_marginLeft="5dp"
-            android:textSize="15sp"
+            android:textSize="12sp"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
             android:id="@+id/require_location"
             android:textColor="@color/normalTextColor"
             android:layout_marginLeft="5dp"
-            android:textSize="15sp"
+            android:textSize="12sp"
             />
     </LinearLayout>
 </LinearLayout>
@@ -54,8 +54,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_alignParentRight="true"
-        android:layout_margin="15dp"
+        android:layout_marginTop="14dp"
         android:layout_centerVertical="true"
+        android:layout_marginRight="7dp"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -63,7 +64,7 @@
             android:id="@+id/top_rv_time"
             android:text="1970-1-1"
             android:textColor="#8E8E8E"
-            android:textSize="13sp"
+            android:textSize="11sp"
 
             />
     <TextView
@@ -72,13 +73,14 @@
         android:id="@+id/top_rv_money"
         android:textColor="@color/moneyColor"
         android:background="@drawable/reward_shape_null"
-        android:textSize="17sp"
+        android:textSize="15sp"
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
         android:layout_marginTop="10dp"
         android:layout_gravity="right"
+
         />
 
     </LinearLayout>

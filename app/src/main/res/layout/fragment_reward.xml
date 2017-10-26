@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +16,7 @@
             />
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="135dp"
+            android:layout_height="113dp"
             android:background="@mipmap/reward_background">
 
             <TextView
@@ -25,7 +26,7 @@
                 android:layout_centerInParent="true"
                 android:text="￥ 0.00"
                 android:textColor="@color/lTextColor"
-                android:textSize="25sp"
+                android:textSize="21sp"
 
                 />
         </RelativeLayout>
@@ -40,45 +41,48 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="28dp"
                 android:background="@drawable/reward_shape"
 
                 >
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="16dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="3dp"
+                    android:layout_marginLeft="4dp"
                     android:src="@mipmap/blue_img" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="9dp"
                     android:gravity="center_vertical"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
                     android:text="@string/account_reward_get"
-                    android:textColor="@color/normalTextColor"
-                    android:textSize="20sp" />
+                    android:textColor="#5F5E5E"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+
+                >
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/reward_shape_null1"
                     android:gravity="center_vertical"
-                    android:paddingBottom="8dp"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="8dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="@string/account_reward"
-                    android:textColor="@color/normalTextColor"
-                    android:textSize="20sp" />
+                    android:textColor="#5F5E5E"
+                    android:textSize="16sp"
+                    android:paddingLeft="10dp"
+                    />
 
                 <TextView
                     android:id="@+id/fragrewad_answerBonus_tv"
@@ -86,14 +90,14 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginRight="3dp"
                     android:background="@drawable/radius_bg1"
                     android:paddingBottom="3dp"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="4dp"
                     android:paddingTop="3dp"
                     android:text="￥ 0.00"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     android:textColor="@color/lTextColor" />
             </RelativeLayout>
 
@@ -107,11 +111,11 @@
                     android:background="@drawable/reward_shape_null1"
                     android:gravity="center_vertical"
                     android:paddingBottom="8dp"
-                    android:paddingLeft="5dp"
+                    android:paddingLeft="10dp"
                     android:paddingTop="8dp"
                     android:text="@string/account_reward_friends"
-                    android:textColor="@color/normalTextColor"
-                    android:textSize="20sp" />
+                    android:textColor="#5F5E5E"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/fragrewad_inviteBonus_tv"
@@ -119,14 +123,14 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginRight="3dp"
                     android:background="@drawable/radius_bg1"
                     android:paddingBottom="3dp"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
                     android:paddingTop="3dp"
                     android:text="￥ 0.00"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     android:textColor="@color/lTextColor" />
             </RelativeLayout>
         </LinearLayout>
@@ -136,7 +140,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="9dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -145,10 +149,10 @@
                 android:background="@drawable/reward_shape">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="6dp"
+                    android:layout_height="16dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="3dp"
+                    android:layout_marginLeft="4dp"
                     android:src="@mipmap/blue_img" />
 
                 <TextView
@@ -156,17 +160,19 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="5dp"
+                    android:paddingLeft="9dp"
 
                     android:paddingTop="5dp"
                     android:text="@string/account_reward_exchange"
-                    android:textColor="@color/normalTextColor"
-                    android:textSize="20sp" />
+                    android:textColor="#5F5E5E"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+
+                >
 
                 <TextView
                     android:layout_width="match_parent"
@@ -174,11 +180,12 @@
                     android:background="@drawable/reward_shape_null1"
                     android:gravity="center_vertical"
                     android:paddingBottom="8dp"
-                    android:paddingLeft="5dp"
+                    android:paddingLeft="10dp"
                     android:paddingTop="8dp"
                     android:text="@string/account_reward_getmoney"
-                    android:textColor="@color/normalTextColor"
-                    android:textSize="20sp" />
+                    android:textColor="#5F5E5E"
+                    android:textSize="16sp"
+                    />
 
                 <TextView
                     android:id="@+id/fragrewad_transferred_tv"
@@ -186,15 +193,17 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginRight="3dp"
                     android:background="@drawable/radius_bg1"
                     android:paddingBottom="3dp"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
                     android:paddingTop="3dp"
                     android:text="￥ 0.00"
-                    android:textSize="15sp"
-                    android:textColor="@color/lTextColor" />
+                    android:textSize="16sp"
+                    android:textColor="@color/lTextColor"
+
+                    />
             </RelativeLayout>
 
             <RelativeLayout
@@ -207,11 +216,12 @@
                     android:background="@drawable/reward_shape_null1"
                     android:gravity="center_vertical"
                     android:paddingBottom="8dp"
-                    android:paddingLeft="5dp"
+                    android:paddingLeft="10dp"
                     android:paddingTop="8dp"
                     android:text="@string/account_reward_loading"
-                    android:textColor="@color/normalTextColor"
-                    android:textSize="20sp" />
+                    android:textColor="#5F5E5E"
+                    android:textSize="16sp"
+                    />
 
                 <TextView
                     android:id="@+id/fragrewad_auditing_tv"
@@ -219,14 +229,14 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginRight="3dp"
                     android:background="@drawable/radius_bg1"
                     android:paddingBottom="3dp"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
                     android:paddingTop="3dp"
                     android:text="￥ 0.00"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     android:textColor="@color/lTextColor" />
             </RelativeLayout>
         </LinearLayout>
@@ -236,70 +246,70 @@
             android:background="@drawable/reward_shape"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="9dp"
             >
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="6dp"
+                android:layout_height="16dp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="3dp"
+                android:layout_marginLeft="6dp"
                 android:src="@mipmap/blue_img" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:layout_marginRight="8dp"
                 android:paddingBottom="5dp"
                 android:paddingLeft="5dp"
                 android:paddingTop="5dp"
                 android:text="@string/account_reward_ask"
-                android:textColor="@color/normalTextColor"
-                android:textSize="20sp" />
+                android:textColor="#5F5E5E"
+                android:textSize="16sp" />
         </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="125dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/reward_shape_null"
-            android:padding="5dp">
+            >
 
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/reward_1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingBottom="20dp"
+                android:orientation="vertical"
                 >
 
                 <EditText
                     android:id="@+id/reward_et"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="41dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="14dp"
                     android:background="@drawable/reward_edittext"
                     android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@."
-                    android:inputType="number"
-                    android:padding="10dp" />
+                    android:inputType="number" />
 
                 <TextView
                     android:id="@+id/reward_getAlipay"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="39dp"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="80dp"
-                    android:layout_marginRight="25dp"
-                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="41dp"
+                    android:layout_marginLeft="44dp"
                     android:background="@drawable/reward_confirm"
                     android:gravity="center"
-                    android:padding="10dp"
+
                     android:text="确认输入"
                     android:textColor="@color/lTextColor"
-                    android:textSize="20sp" />
-            </RelativeLayout>
+                    android:textSize="16sp" />
+            </LinearLayout>
 
             <RelativeLayout
                 android:id="@+id/reward_2"
@@ -311,12 +321,11 @@
                     android:id="@+id/reward_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="5dp"
                     android:text="已绑定支付宝账号\n提现款将会通过支付宝转账到该账户"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/normalTextColor"
-                    android:textSize="17sp" />
+                    android:layout_marginTop="5dp"
+                    android:textColor="#5F5E5E"
+                    android:textSize="14sp" />
 
                 <org.angmarch.views.NiceSpinner
                     android:id="@+id/reward_spinner"
@@ -347,9 +356,11 @@
                     android:paddingBottom="5dp"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
+                    android:layout_marginRight="41dp"
+                    android:layout_marginLeft="41dp"
                     android:text="申请兑付至支付宝"
                     android:textColor="@color/lTextColor"
-                    android:textSize="@dimen/textNormalSize" />
+                    android:textSize="16sp" />
             </RelativeLayout>
         </RelativeLayout>
 

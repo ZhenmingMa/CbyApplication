@@ -10,8 +10,12 @@
     <ImageView
         android:id="@+id/shop_item_iv"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:scaleType="fitXY" />
+        android:layout_height="153dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginLeft="13dp"
+        />
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,21 +34,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="6dp"
         >
         <TextView
             android:id="@+id/shop_item_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textColor="#5D5B5B" />
         <TextView
             android:id="@+id/shop_item_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#F80B43"
-            android:textSize="15sp"
+            android:textSize="13sp"
             />
         <TextView
             android:id="@+id/shop_item_time"
@@ -52,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/shop_item_name"
             android:layout_marginTop="10dp"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textColor="#636262" />
     </LinearLayout>
     <TextView
@@ -62,13 +66,13 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:text="兑换"
-        android:textSize="14sp"
+        android:textSize="12sp"
         android:background="@drawable/rect_null2"
         android:textColor="#F80B43"
-        android:paddingTop="3dp"
-        android:paddingBottom="3dp"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
         />
 </RelativeLayout>
     </android.support.v7.widget.CardView>
