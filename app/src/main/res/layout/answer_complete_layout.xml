@@ -6,7 +6,7 @@
     <EditText
         android:id="@+id/answer_complete_layout_et"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:background="@null"
         android:hint="请在这里输入内容"
         />

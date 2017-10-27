@@ -3,262 +3,275 @@
 
     android:id="@+id/my_fragment_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
-    <RelativeLayout
-        android:id="@+id/my_login_rl"
-        android:layout_width="match_parent"
-        android:layout_height="146dp"
-        android:background="@mipmap/my_background1">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/my_background2"
-            android:layout_centerInParent="true"
-            />
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
 
-    >
-        <LinearLayout
-            android:id="@+id/my_login_exit_ll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="40dp"
-            >
-
-                <TextView
-                    android:id="@+id/my_register"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/reward_confirm"
-                    android:paddingBottom="10dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="10dp"
-                    android:text="@string/login_noname"
-                    android:textColor="@color/lTextColor" />
-
-                <TextView
-                    android:id="@+id/my_login"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:background="@drawable/reward_confirm"
-                    android:paddingBottom="10dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="10dp"
-                    android:text="@string/login_login"
-                    android:textColor="@color/lTextColor" />
-            </LinearLayout>
-</RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/my_login_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone">
-
-            <TextView
-                android:id="@+id/my_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="17dp"
-                android:layout_marginTop="18dp"
-                android:text="用户名"
-                android:textColor="#565656"
-                android:textSize="18sp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true">
-
-                <TextView
-                    android:id="@+id/my_login_revisePw"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="80dp"
-                    android:background="@drawable/reward_confirm"
-                    android:gravity="center"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
-                    android:text="@string/my_change"
-                    android:textColor="@color/lTextColor"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/my_login_exit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="80dp"
-                    android:background="@drawable/reward_confirm"
-                    android:gravity="center"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
-                    android:text="@string/my_out"
-                    android:textColor="@color/lTextColor"
-                    android:textSize="16sp" />
-            </LinearLayout>
-        </RelativeLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/my_finish_rl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/lTextColor">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginRight="9dp"
-            android:text="@string/my_finish"
-            android:drawableLeft="@mipmap/my_finish"
-            android:drawableRight="@mipmap/next"
-            android:drawablePadding="9dp"
-            android:textColor="#565656"
-            android:textSize="16sp" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/my_loading_rl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:background="@color/lTextColor">
-
-        <cn.bingoogolapple.badgeview.BGABadgeTextView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/badgeView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:drawableLeft="@mipmap/my_unfinish"
-            android:drawableRight="@mipmap/next"
-            android:drawablePadding="9dp"
-            android:layout_marginRight="9dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="16dp"
-            android:text="未完成的调研"
-            android:textColor="#565656"
-            android:textSize="16sp"
-            app:badge_dragable="true"
-            app:badge_gravity="rightTop"
-            android:layout_alignParentTop="true"
-   />
-
-    </RelativeLayout>
-
-
-
-    <RelativeLayout
-        android:id="@+id/my_invite_rl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@color/lTextColor">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="9dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="16dp"
-            android:text="@string/account_reward_friends"
-            android:drawableLeft="@mipmap/my_invite"
-            android:drawableRight="@mipmap/next"
-            android:drawablePadding="9dp"
-            android:textColor="#565656"
-            android:textSize="16sp" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/my_news_rl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:background="@color/lTextColor">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="9dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="16dp"
-            android:text="我的消息"
-            android:drawableLeft="@mipmap/my_message"
-            android:drawableRight="@mipmap/next"
-            android:drawablePadding="9dp"
-            android:textColor="#565656"
-            android:textSize="16sp" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:background="@color/lTextColor">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="9dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="16dp"
-            android:text="@string/my_about"
-            android:drawableLeft="@mipmap/my_about"
-            android:drawableRight="@mipmap/next"
-            android:drawablePadding="9dp"
-            android:textColor="#565656"
-            android:textSize="16sp" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/my_apply_rl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:background="@color/lTextColor">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginRight="9dp"
-            android:text="@string/my_apply"
-            android:drawableLeft="@mipmap/my_apply"
-            android:drawableRight="@mipmap/next"
-            android:drawablePadding="9dp"
-            android:textColor="#565656"
-            android:textSize="16sp" />
-
-    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"/>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/my_login_rl"
+            android:layout_width="match_parent"
+            android:layout_height="146dp"
+            android:background="@mipmap/my_background1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/my_background2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/my_login_exit_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="40dp">
+
+                    <TextView
+                        android:id="@+id/my_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/reward_confirm"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/login_noname"
+                        android:textColor="@color/lTextColor" />
+
+                    <TextView
+                        android:id="@+id/my_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/reward_confirm"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/login_login"
+                        android:textColor="@color/lTextColor" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/my_login_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/my_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="18dp"
+                    android:text="用户名"
+                    android:textColor="#565656"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/my_login_revisePw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="80dp"
+                        android:background="@drawable/reward_confirm"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/my_change"
+                        android:textColor="@color/lTextColor"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/my_login_exit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="80dp"
+                        android:background="@drawable/reward_confirm"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/my_out"
+                        android:textColor="@color/lTextColor"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_finish_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/lTextColor">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@mipmap/my_finish"
+                android:drawablePadding="9dp"
+                android:drawableRight="@mipmap/next"
+                android:text="@string/my_finish"
+                android:textColor="#565656"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_loading_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/lTextColor">
+
+            <cn.bingoogolapple.badgeview.BGABadgeTextView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/badgeView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="9dp"
+                android:paddingRight="15dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@mipmap/my_unfinish"
+                android:drawablePadding="9dp"
+                android:text="未完成的调研"
+                android:textColor="#565656"
+                android:textSize="16sp"
+                app:badge_dragable="true"
+                app:badge_gravity="rightTop" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/next"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="9dp"
+                android:layout_marginEnd="11dp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/my_invite_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/lTextColor">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@mipmap/my_invite"
+                android:drawablePadding="9dp"
+                android:drawableRight="@mipmap/next"
+                android:text="@string/account_reward_friends"
+                android:textColor="#565656"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_news_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/lTextColor">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@mipmap/my_message"
+                android:drawablePadding="9dp"
+                android:drawableRight="@mipmap/next"
+                android:text="我的消息"
+                android:textColor="#565656"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/lTextColor">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@mipmap/my_about"
+                android:drawablePadding="9dp"
+                android:drawableRight="@mipmap/next"
+                android:text="@string/my_about"
+                android:textColor="#565656"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_apply_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/lTextColor">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@mipmap/my_apply"
+                android:drawablePadding="9dp"
+                android:drawableRight="@mipmap/next"
+                android:text="@string/my_apply"
+                android:textColor="#565656"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+    </LinearLayout>
 </ScrollView>

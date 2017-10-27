@@ -1,6 +1,7 @@
 package com.example.uuun.cbyapplication.utils;
 
 import android.annotation.SuppressLint;
+import android.util.Log;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -15,6 +16,13 @@ public class DateUtils {
     public static String getDateToString(long time) {
         Date d = new Date(time);
         SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        return sf.format(d);
+    }
+
+    //时间戳转换成字符窜
+    public static String getDateToString1(long object) {
+        Date d = new Date(object);
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
         return sf.format(d);
     }
 

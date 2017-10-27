@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,7 +60,6 @@ public class TopFragment extends Fragment {
             if (TextUtils.isEmpty(s)){
                 tag = true;
 
-
             }
         }
     };
@@ -79,10 +79,10 @@ public class TopFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
                 SurveyBean1.DataBean.ContentBean bean = lvAdapter.getList().get(i-2);
-                // MyLog.info("!!!!!!!!!!!!!------------"+bean.getName());
                 Intent intent = new Intent(getActivity(),SurveyActivity.class);
                 intent.putExtra("SurveyBean",bean);
                 startActivity(intent);
+
             }
         });
 
@@ -178,8 +178,8 @@ public class TopFragment extends Fragment {
             @Override
             public void onSuccess(String result) {
                 result1[0] = result;
-                //MyLog.info(result);
                 if(!TextUtils.isEmpty(result)){
+                    Log.e("test",result);
                     Gson gson = new Gson();
                     SurveyBean1 surveyBean1 = gson.fromJson(result, SurveyBean1.class);
                     SurveyBean1.DataBean data1 = surveyBean1.getData();

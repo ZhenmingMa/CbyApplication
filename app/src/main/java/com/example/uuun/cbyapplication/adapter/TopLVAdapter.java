@@ -13,9 +13,11 @@ import android.widget.TextView;
 import com.example.uuun.cbyapplication.R;
 import com.example.uuun.cbyapplication.activity.MyApplyActivity;
 import com.example.uuun.cbyapplication.bean.SurveyBean1;
+import com.example.uuun.cbyapplication.utils.DateUtils;
 import com.example.uuun.cbyapplication.utils.MyLog;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -112,28 +114,27 @@ public class TopLVAdapter extends BaseAdapter {
         switch (type){
             case TYPE_2:
                 holder2.name.setText(list.get(i-1).getName());
-                //  if (list.get(i).getCreateTime() != null)
-                holder2.time.setText("发布时间:"+"2017-7-26");
-                // MyLog.info("!!!!!!!!!!!!!!"+list.get(i).getTime());
+                holder2.time.setText("发布时间:"+ DateUtils.getDateToString1(list.get(i-1).getCreateTime()));
                 holder2.money.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
                 holder2.money.setText("￥"+list.get(i-1).getBonus());
-                if (!holder2.require_age.equals("null")) {
-                    if(list.get(i-1).getAge()=="0"){
-                        holder2.require_age.setText("要求:" +"女");
-                    }else{
-                        holder2.require_age.setText("要求:" +"男");
-                    }
-
+                if (list.get(i-1).getAge()!=null) {
+                    holder2.require_age.setText("要求:年龄:" +list.get(i-1).getAge());
                 } else {
                     holder2.require_age.setText("要求:年龄:不限");
                 }
-                if (!holder2.require_sex.equals("null")) {
-                    holder2.require_sex.setText("," +list.get(i-1).getSex());
-                } else {
+
+                if (list.get(i-1).getSex()== 0) {
+                    holder2.require_sex.setText(",性别:女");
+                }
+                if (list.get(i-1).getSex()== 1){
+                    holder2.require_sex.setText(",性别:男");
+                }
+                if (list.get(i-1).getSex()== 3) {
                     holder2.require_sex.setText(",性别:不限");
                 }
-                if (!holder2.require_location.equals("null")) {
-                    holder2.require_sex.setText("," + list.get(i-1).getCity());
+
+                if (list.get(i-1).getCity()!=null || list.get(i-1).getCity().equals("")) {
+                    holder2.require_sex.setText(",坐标:" + list.get(i-1).getCity());
                 } else {
                     holder2.require_sex.setText(",坐标:不限");
                 }
