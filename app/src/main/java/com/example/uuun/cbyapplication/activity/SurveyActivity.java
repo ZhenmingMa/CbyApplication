@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.example.uuun.cbyapplication.R;
 import com.example.uuun.cbyapplication.bean.SurveyBean1;
+import com.example.uuun.cbyapplication.utils.DateUtils;
 import com.example.uuun.cbyapplication.utils.MyLog;
 import com.example.uuun.cbyapplication.utils.PermissionCompat;
 import com.example.uuun.cbyapplication.utils.ShareUtils;
@@ -164,7 +165,7 @@ public class SurveyActivity extends AppCompatActivity implements PermissionCompa
 
 
         // if (bean.getCreateTime() != null)
-        time.setText("发布时间:"+"2017-7-26");
+        time.setText("发布时间:"+ DateUtils.getDateToString(bean.getCreateTime()));
         age.setText("要求:年龄:" + bean.getAge());
         if (bean.getSex() == 1)
             sex.setText(",性别:" + "男");
@@ -174,7 +175,7 @@ public class SurveyActivity extends AppCompatActivity implements PermissionCompa
         number.setText("题量:" + bean.getQuestions() + "道");
         reminder.setText("剩余:" + bean.getCount() + "席位");
         state.setText("状态:"+"运行中");
-        endTime.setText("截止时间:"+"2018-05-25");
+        endTime.setText("截止时间:"+DateUtils.getDateToString(bean.getTime()));
 
         permission = new PermissionCompat(SurveyActivity.this,needPermission);
         permission.setPermissionListener(SurveyActivity.this);

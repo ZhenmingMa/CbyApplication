@@ -17,7 +17,6 @@ import com.example.uuun.cbyapplication.utils.DateUtils;
 import com.example.uuun.cbyapplication.utils.MyLog;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -134,9 +133,9 @@ public class TopLVAdapter extends BaseAdapter {
                 }
 
                 if (list.get(i-1).getCity()!=null || list.get(i-1).getCity().equals("")) {
-                    holder2.require_sex.setText(",坐标:" + list.get(i-1).getCity());
+                    holder2.require_location.setText(",坐标:" + list.get(i-1).getCity());
                 } else {
-                    holder2.require_sex.setText(",坐标:不限");
+                    holder2.require_location.setText(",坐标:不限");
                 }
                 break;
             case TYPE_1:

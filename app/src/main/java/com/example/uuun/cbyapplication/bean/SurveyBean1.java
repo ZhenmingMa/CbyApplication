@@ -4,7 +4,6 @@ import org.xutils.db.annotation.Column;
 import org.xutils.db.annotation.Table;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -252,7 +251,7 @@ public class SurveyBean1 implements Serializable{
                 this.createTime = createTime;
             }
 
-            public Object getTime() {
+            public Long getTime() {
                 return time;
             }
 
