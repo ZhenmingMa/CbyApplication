@@ -125,11 +125,18 @@
         android:layout_marginLeft="11dp"
         android:layout_marginTop="10dp"
         >
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="  公司联系邮箱:"
+            android:text="*"
+            android:textColor="#f66"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公司联系邮箱:"
             android:textSize="18sp"
             android:textColor="#9F9F9F"
             />

@@ -22,6 +22,7 @@ import com.example.uuun.cbyapplication.activity.SurveyActivity;
 import com.example.uuun.cbyapplication.adapter.TopLVAdapter;
 import com.example.uuun.cbyapplication.bean.SurveyBean1;
 import com.example.uuun.cbyapplication.myapp.MyApp;
+import com.example.uuun.cbyapplication.utils.MyLog;
 import com.example.uuun.cbyapplication.utils.UrlConfig;
 import com.google.gson.Gson;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
@@ -51,6 +52,7 @@ public class TopFragment extends Fragment {
     private int page;
     //private LinearLayout ll;
     private boolean tag = false;
+    private boolean flag = false;//标记listview是否占满一屏
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -143,9 +145,19 @@ public class TopFragment extends Fragment {
                         @Override
                         public void run() {
                             lv.onRefreshComplete();
-                            Toast.makeText(getActivity(),"俺是有底线的",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(),"我是有底线的",Toast.LENGTH_SHORT).show();
                         }
-                    }, 500);
+                    }, 1000);
+                }
+
+                if(!flag){
+                    lv.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            lv.onRefreshComplete();
+                            Toast.makeText(getActivity(),"没有更多数据啦",Toast.LENGTH_SHORT).show();
+                        }
+                    }, 1000);
                 }
 
 
@@ -154,6 +166,7 @@ public class TopFragment extends Fragment {
         lv.setOnLastItemVisibleListener(new PullToRefreshBase.OnLastItemVisibleListener() {
             @Override
             public void onLastItemVisible() {
+                MyLog.info("!!!!!!!!!!!!!!");
                 page++;
                 // mGetData(page);
 
@@ -161,6 +174,7 @@ public class TopFragment extends Fragment {
                 Message msg = Message.obtain();
                 msg.obj = s;
                 handler.sendMessageDelayed(msg,500);
+                flag = true;
             }
         });
     }
